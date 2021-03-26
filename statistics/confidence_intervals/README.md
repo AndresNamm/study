@@ -1,4 +1,10 @@
+
 I have provided some references and short explanations but in general I really recommend you to google your own tutorials that fit the best for the way you understand things. 
+
+# ME GOING OVER THIS TOPIC IN YOUTUBE
+
++ [First video](https://www.youtube.com/watch?v=yO8x4eyEp6o)
++ [Second video](https://www.youtube.com/watch?v=xIB3rAoWSbE)
 
 # THINGS TO GO THROUGH IN ORDER TO PROPERLY UNDERSTAND THIS TOPIC
 
