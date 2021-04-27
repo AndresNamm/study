@@ -29,7 +29,7 @@
 + For binary categories (0,1;True,False) calculate Gini index. 
   + ![IMG](GINILEAF.png)
   + ![IMG](GINI.png)
-+ For numeric values [Watch 10:01 from this video]((https://www.youtube.com/watch?v=_L39rN6gz7Y))
++ For numeric values [Watch 10:01 from this video](https://www.youtube.com/watch?v=_L39rN6gz7Y)
 
 # REFERENCES 
 
