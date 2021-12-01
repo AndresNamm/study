@@ -31,3 +31,11 @@ The proof for central limit theorem is very theoretical and we wont cover it her
 # Confidence Interval
 
 With a confidence interval we have a lower bound L and upper bound U and we claim that we are X percent sure that the global estimate lies in this bound. [look at the example here](https://www.mathsisfun.com/data/confidence-interval.html)
+
+I also suggest to look [Coursera statistics course confidence intervals topic](https://www.coursera.org/learn/stanford-statistics/home/week/5)
+
++ The main idea is that due to CLT we can say that the samples will surround the global mean in a normal distribution. Means that we can use the empirical rules to derive confidence levels that say for example that 95 % of the samples will be around the global mean with SE  (global standard deviation) / sqrt(number of samples)
+![image](https://user-images.githubusercontent.com/21141607/144257774-adfb2ec2-cf78-415c-a7fa-f8f5ef77681e.png)
+
+
+
