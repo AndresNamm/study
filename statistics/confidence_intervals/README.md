@@ -32,9 +32,17 @@ The proof for central limit theorem is very theoretical and we wont cover it her
 
 With a confidence interval we have a lower bound L and upper bound U and we claim that we are X percent sure that the global estimate lies in this bound. [look at the example here](https://www.mathsisfun.com/data/confidence-interval.html)
 
+
 I also suggest to look [Coursera statistics course confidence intervals topic](https://www.coursera.org/learn/stanford-statistics/home/week/5)
 
-+ The main idea is that due to CLT we can say that the samples will surround the global mean in a normal distribution. Means that we can use the empirical rules to derive confidence levels that say for example that 95 % of the samples will be around the global mean with SE  (global standard deviation) / sqrt(number of samples)
+
++ N = number of samples / This is rather a theoretical construct. When it goes to infinity, the means of those N samples will converge to **global** mean
++ n = sample sizee
+
+The main idea is that due to CLT we can say that the N sample means with size will surround the global mean in a normal distribution. This result that we can use the empirical rule to derive confidence levels that say for example that 95 % of the means of samples with size n will be around the global mean. In this case the STD for those means would be  
+(global standard deviation) / sqrt(n)      
+![image](https://user-images.githubusercontent.com/21141607/146001843-b7d525f0-2c7f-462b-8780-873ee839861f.png)
+
 ![image](https://user-images.githubusercontent.com/21141607/144257774-adfb2ec2-cf78-415c-a7fa-f8f5ef77681e.png)
 
 
