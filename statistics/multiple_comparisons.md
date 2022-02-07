@@ -3,4 +3,4 @@
 
 
 
-[Benjamin Hochbers method](https://www.youtube.com/watch?v=rZKa4tW2NKs) and general info about FDR https://www.youtube.com/watch?v=-oIkIdhSNeU
+[Benjamin Hochbers method](https://www.youtube.com/watch?v=rZKa4tW2NKs) and general info about FDR https://www.youtube.com/watch?v=-oIkIdhSNeU  - Example of calculating this in Excel. https://www.youtube.com/watch?v=S-F_R_WKNfQ
