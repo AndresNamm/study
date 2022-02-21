@@ -1,8 +1,23 @@
 # [Bonferroni Correction explanation](https://toptipbio.com/bonferroni-correction-method/)
 
+
+If we have alpha lets say = 0.05. This means we reject the null hypothesis whenever we see a result that would happen in 5 % samples when sampling from data where the H0 is true. In this case we can calmly say that as the probability of this happening is small we consider that actually H1 is true. 
+
+Now what happens if we do multiple experiments with this data? 
+In this case the likelyhood of getting some observation that is in this 5 % is getting bigger. To avoid that we divide tha alpha with the number of experiments conducted. 
+
+
 # [FDR - False discovery rate](https://www.youtube.com/watch?v=4AytJuNkeSM)
 
+
+
+
 False discovery rate Example 
+
+
+
+
+
 ![image](https://user-images.githubusercontent.com/21141607/153624570-e9e66bc9-3bed-4538-89bb-936a6586fbd4.png)
 
 In this example we have a dataset where we actually know what the correct t-test would produce. In real life this would not happen but lets assume this happens for us. 
