@@ -1,30 +1,40 @@
-# [Bonferroni Correction explanation](https://toptipbio.com/bonferroni-correction-method/)
+# Bonferroni Correction 
 
 
-If we have alpha lets say = 0.05. This means we reject the null hypothesis whenever we see a result that would happen in 5 % samples when sampling from data where the H0 is true. In this case we can calmly say that as the probability of this happening is small we consider that actually H1 is true. 
+[explanation](https://toptipbio.com/bonferroni-correction-method/)
 
-Now what happens if we do multiple experiments with this data? 
-In this case the likelyhood of getting some observation that is in this 5 % is getting bigger. To avoid that we divide tha alpha with the number of experiments conducted. 
+## BACKGROUND - T TESTS
 
+If we have alpha lets say = 0.05. This means we reject the null hypothesis whenever we see a result that under the normal curve falls so far from expected that it has only a 5 % chance of happening assuming H0 is true. 
 
-# [FDR - False discovery rate](https://www.youtube.com/watch?v=4AytJuNkeSM)
+## BONFERRONI CORRECTION
 
-
-
-
-False discovery rate Example 
+Now what happens if we do multiple experiments with this data? In this case the likelyhood of getting some observation that is in this 5 % is getting bigger. To avoid that we divide tha alpha with the number of experiments conducted. 
 
 
+# FDR
 
 
++ FDP = False Discoveries / Total Discoveries (False Discoveries + True Discoveris)
 
-![image](https://user-images.githubusercontent.com/21141607/153624570-e9e66bc9-3bed-4538-89bb-936a6586fbd4.png)
+![image](https://user-images.githubusercontent.com/21141607/155094467-2428f9e7-003a-4bba-8ca3-7deee7529ba4.png)
 
-In this example we have a dataset where we actually know what the correct t-test would produce. In real life this would not happen but lets assume this happens for us. 
-In this example we know that 900 cases the H0 is true and for 100 cases H1 is true. 
-+ If we know the H0 is true in 900 cases and know the alpha is 0.05 we know that in 5 % of the cases we would have this situation 
+In the example above we have 
++ 1000 tests 
++ 900 times H0 is correct
++ 100 times H1 is correct 
++ We do true discoveries 80 times 
++ We do false discoveries 41 times - Based on how many tests we do we should be able to approximate this. 
 
 
+For example if we conduct 1000 tests with alpha=0.05 we can be sure arount 50 of those tests will have an outcome that rejects H0 even if its correct. Now if get in total 141 rejections we can be assume 50 (or in this case 41) of those discoveries are false.    
+
+Thus FDP=41/121
 
 
-[Benjamin Hochbers method](https://www.youtube.com/watch?v=rZKa4tW2NKs) and general info about FDR https://www.youtube.com/watch?v=-oIkIdhSNeU  - Example of calculating this in Excel. https://www.youtube.com/watch?v=S-F_R_WKNfQ
+Benjamin Hochber method tries to keep FDP under control when doing multiple tests
+
+![image](https://user-images.githubusercontent.com/21141607/155096527-fbb0260b-80cb-462c-a06c-81af388c782e.png)
+
+
++ Example of calculating this in Excel. https://www.youtube.com/watch?v=S-F_R_WKNfQ
