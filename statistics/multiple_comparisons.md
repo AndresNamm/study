@@ -14,10 +14,14 @@ Now what happens if we do multiple experiments with this data? In this case the 
 
 # FDR
 
-
++ [Good tutorial 1 ](https://www.youtube.com/watch?v=rZKa4tW2NKs&t=33s)
++ [Good tutorial 2](https://www.youtube.com/watch?v=K8LQSvtjcEo)
 + FDP = False Discoveries / Total Discoveries (False Discoveries + True Discoveris)
 
 ![image](https://user-images.githubusercontent.com/21141607/155094467-2428f9e7-003a-4bba-8ca3-7deee7529ba4.png)
+*The above image might be a bit confusing
+
+
 
 In the example above we have 
 + 1000 tests 
