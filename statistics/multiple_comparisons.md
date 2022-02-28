@@ -27,7 +27,7 @@ In the example above we have
 + 1000 tests 
 + 900 times H0 is correct
 + 100 times H1 is correct 
-+ We do true discoveries 80 times 
++ We do true discoveries 80 times - In real life we can't really get this number but we can get the number of total discoveries.  
 + We do false discoveries 41 times - Based on how many tests we do we should be able to approximate this. 
 
 
