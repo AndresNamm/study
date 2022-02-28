@@ -42,3 +42,8 @@ Benjamin Hochber method tries to keep FDP under control when doing multiple test
 
 
 + Example of calculating this in Excel. https://www.youtube.com/watch?v=S-F_R_WKNfQ
+
+## P-VALUE DISTRIBUTION QUESTIONS 
+
++ http://varianceexplained.org/statistics/interpreting-pvalue-histogram/
++ https://stats.stackexchange.com/questions/10613/why-are-p-values-uniformly-distributed-under-the-null-hypothesis/481843#481843?newreg=081171011c3e48a293391a012ef9fab5
