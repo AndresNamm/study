@@ -17,11 +17,11 @@ Now what happens if we do multiple experiments with this data? In this case the 
 + [Good tutorial 1 ](https://www.youtube.com/watch?v=rZKa4tW2NKs&t=33s)
 + [Good tutorial 2](https://www.youtube.com/watch?v=K8LQSvtjcEo)
 + FDP = False Discoveries / Total Discoveries (False Discoveries + True Discoveris)
++ More Or less The idea for FDR is that we set a linear function as the boundary for p-values. This linear function based on alpha will have an average value less then alpha. Which means that the p-values will have the mistake ratio on average less than alpha. Somethin like that. Read mor about function average values [here](https://www.khanacademy.org/math/ap-calculus-ab/ab-applications-of-integration-new/ab-8-1/v/calculating-function-average-over-interval)
++ These videos are going to talk about P value distribution. This question answer from [Stefan explains how this works](https://stats.stackexchange.com/questions/10613/why-are-p-values-uniformly-distributed-under-the-null-hypothesis/481843#481843?newreg=081171011c3e48a293391a012ef9fab5) 
 
 ![image](https://user-images.githubusercontent.com/21141607/155094467-2428f9e7-003a-4bba-8ca3-7deee7529ba4.png)
 *The above image might be a bit confusing
-
-
 
 In the example above we have 
 + 1000 tests 
@@ -41,7 +41,7 @@ Benjamin Hochber method tries to keep FDP under control when doing multiple test
 ![image](https://user-images.githubusercontent.com/21141607/155096527-fbb0260b-80cb-462c-a06c-81af388c782e.png)
 
 
-+ Example of calculating this in Excel. https://www.youtube.com/watch?v=S-F_R_WKNfQ
++ Example of calculating FDR values in Excel. https://www.youtube.com/watch?v=S-F_R_WKNfQ
 
 ## P-VALUE DISTRIBUTION QUESTIONS 
 
