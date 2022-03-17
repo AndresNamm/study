@@ -1,7 +1,7 @@
 
 
 
-
+# ALGORITHMS
 
 + Supervised Methods
   + Prediction 
@@ -22,8 +22,16 @@
     + LDA based on Bayes (Soft Clustering)
   + PCA 
 
+# USE CASES 
 
-
+1. Image Recognition 
+  2. Neural Networks  
+3. Sentiment Analysis
+4. Anomaly Detection
+5. Search Engines 
+6. Playing Games 
+7. Speech Recognition
+8. News, Email Classification 
 
 
 
