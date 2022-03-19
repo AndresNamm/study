@@ -39,3 +39,4 @@
 # REFERENCES
 
 [Different Machine Learning Models](https://www.youtube.com/watch?v=yN7ypxC7838)
+[SVM](https://m.youtube.com/watch?v=_YPScrckx28)
