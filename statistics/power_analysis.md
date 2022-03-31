@@ -10,7 +10,7 @@
 
 # COMMENTS ON DOING POWER ANALYSIS ON HYPOTHESIS TESTING - CALCULATING EFFECT
 
-ES = Effect Size (mean1-mean2)/ 
+ES = Effect Size (mean1-mean2)/std
 ![image](https://user-images.githubusercontent.com/21141607/159645046-edadc1f9-1b0b-4a4c-8bdb-cf2b95b77da8.png)
 
 
