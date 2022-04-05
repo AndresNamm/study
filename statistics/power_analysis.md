@@ -10,8 +10,20 @@
 
 # COMMENTS ON DOING POWER ANALYSIS ON HYPOTHESIS TESTING - CALCULATING EFFECT
 
-ES = Effect Size (mean1-mean2)/std
+
+[Good explanation of Effect Size](https://www.youtube.com/watch?app=desktop&v=tTgouKMz-eI)
+ES = Effect Size (mean1-mean2)/std  
 ![image](https://user-images.githubusercontent.com/21141607/159645046-edadc1f9-1b0b-4a4c-8bdb-cf2b95b77da8.png)
+
+
+**NB** One important thing to note there is a difference
+
++ STD over samples = std / sqrt(n)    
++ std for data itself = std   
+
+
+STD over samples gets smaller as the sample size grows. std for data remains the same as data itself varies. 
+
 
 
 ![image](https://user-images.githubusercontent.com/21141607/159644887-9cff4f53-fae9-4f7a-8b78-bdef8e6c5420.png)
