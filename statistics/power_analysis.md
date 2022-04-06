@@ -3,7 +3,7 @@
 + [Power Analysis, Clearly Explained](https://www.youtube.com/watch?v=VX_M3tIyiYk&t=50s)
 + [Multiple good examples on doing Power Analysis on Confidence Intervals and Hypothesis tests](https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_power/bs704_power_print.html)  
    + [Same but in HTML](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Power/) 
-+ [Pretty good article about effect size](https://meera.snre.umich.edu/power-analysis-statistical-significance-effect-size)
++ [Pretty good article about effect size](https://github.com/AndresNamm/study/blob/main/statistics/effect_size.md)
 
 
 
@@ -11,7 +11,7 @@
 # COMMENTS ON DOING POWER ANALYSIS ON HYPOTHESIS TESTING - CALCULATING EFFECT
 
 
-[Good explanation of Effect Size](https://www.youtube.com/watch?app=desktop&v=tTgouKMz-eI)
+[Good explanation of Effect Size](https://github.com/AndresNamm/study/blob/main/statistics/effect_size.md)
 ES = Effect Size (mean1-mean2)/std  
 ![image](https://user-images.githubusercontent.com/21141607/159645046-edadc1f9-1b0b-4a4c-8bdb-cf2b95b77da8.png)
 
