@@ -19,7 +19,7 @@ ES = Effect Size (mean1-mean2)/std
 **NB** One important thing to note there is a difference
 
 + STD over samples = std / sqrt(n)    
-+ std for data itself = std   
++ std for data itself = std   - To calculate effect size we are using the std for the data. This can be from control group or found from literature. 
 
 
 STD over samples gets smaller as the sample size grows. std for data remains the same as data itself varies. 
