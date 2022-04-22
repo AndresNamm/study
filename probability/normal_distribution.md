@@ -9,4 +9,6 @@ with formula
 
 1. by deducting mean from X we are centralizing the distribution to 0. Previously the mean was \mu but
 
-$ \mu $
+```math
+e^{i\pi} + 1 = 0 \mu
+```$
