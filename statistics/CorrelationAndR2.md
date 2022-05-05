@@ -1,5 +1,9 @@
 # RESEARCH ABOUT CORRELATION 
 
++ Covariance is essentially a sum of replications between deviations from X and Y which we divide by (n-1) to get the average of deviation multiplications.
++ To get the correlation from it, we get the standard deviations of both datasets and replicate these standard deviations of X and Y with each other. This gives us a baseline for what the maximum Covariance could be. 
++ In Covariance You can think of each part of the summation as an individual Standard Deviation replication pairwise that can also have a negative value. 
++ My question is still, how we can get the Covariance to be the same as replication of STDs with perfect correlationa
 
 https://en.wikipedia.org/wiki/Pearson_correlation_coefficient   
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5816993/   
