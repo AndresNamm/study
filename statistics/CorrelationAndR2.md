@@ -1,9 +1,14 @@
 # RESEARCH ABOUT CORRELATION 
 
-+ Covariance is essentially a AVERAGE of X * Y for all pairs of data.  
-+ To get the correlation from it, we get the standard deviations of both datasets and replicate these standard deviations of X and Y with each other. This gives us a baseline for what the maximum Covariance could be. 
++ Covariance is essentially a AVERAGE of X * Y for all pairs of data. 
+    + This is the largest if we mutliply with each other the closest values possible. 
++ To get the correlation from it, we get the standard deviations of both datasets and replicate these with each other. This gives us a baseline for what the maximum Covariance could be.
+    + If we replicate the n-th largest element from X and Y for n=0..n=k where k is the index of the largest element, we will get on average
+
+
+
 + In Covariance You can think of each part of the summation as an individual Standard Deviation replication pairwise that can also have a negative value. If correlation is one the average of pairwise deviations multiplications should be the same as the multiplication of average deviation of the whole dataset.
-+ My question is still, how we can get the Covariance to be the same as replication of STDs with perfect correlationa
++ My question is still, how we can get the Covariance to be the same as replication of STDs with perfect correlation
 
 https://en.wikipedia.org/wiki/Pearson_correlation_coefficient   
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5816993/   
@@ -11,7 +16,6 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5816993/
 ![image](https://user-images.githubusercontent.com/21141607/166409333-7d15f951-0775-4b00-bd30-575dc66bf8bd.png)   
 
 + The top and bottom of this function in case of high correlation should be equalt to each other. 
-  + 
   + In the bottom we are taking the sum of deviations squared and then taking the sqrt from it.  
 + To understand how both functions grow here, look at this https://github.com/AndresNamm/study/blob/main/visualization/corr.py 
 
