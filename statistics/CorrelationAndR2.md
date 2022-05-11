@@ -12,8 +12,14 @@
 
 https://en.wikipedia.org/wiki/Pearson_correlation_coefficient   
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5816993/   
+
+CORRELATION FORMULA GENERAL
 ![image](https://user-images.githubusercontent.com/21141607/166409240-fcd44cb6-a1f3-46c8-accf-0e49aabcb732.png)   
+STD 
+![image](https://user-images.githubusercontent.com/21141607/167784298-2c5dd4e6-847f-4d01-a2bc-c2dbc5148eda.png)
+CORRELATION FORMULA CALCULATION
 ![image](https://user-images.githubusercontent.com/21141607/166409333-7d15f951-0775-4b00-bd30-575dc66bf8bd.png)   
+
 
 + The top and bottom of this function in case of high correlation should be equalt to each other. 
   + In the bottom we are taking the sum of deviations squared and then taking the sqrt from it.  
