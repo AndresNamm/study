@@ -8,6 +8,6 @@
 
 ![image](https://user-images.githubusercontent.com/21141607/163121095-26ff6cd4-c2b2-4732-9073-4d2c0cdf5d19.png)    
 
-+ Think of percent of overlap as the part of the area covered by both distributions that is not overlapped. 
++ Think of percent of overlap as the part of the area covered by both distributions that is not overlapped. You can calculate this by substracting the Integral from the other on each part of the linear scale. 
 + Taking one mean as the Percentile of the other mean is another interesting thing to look at from the datas standpoint. 
 
