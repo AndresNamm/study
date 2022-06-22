@@ -8,6 +8,7 @@ Where SE is the standard deviation of the means over many samples based on CLT =
 
 # COMPARING 2 SAMPLES 
 
+https://www.coursera.org/learn/stanford-statistics/lecture/nQB9A/the-two-sample-z-test
 
 + Often you dont have 1 set value you cang compare against but you need to get 2 samples and compare the populations 
 
