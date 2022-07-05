@@ -14,4 +14,5 @@ https://www.coursera.org/learn/stanford-statistics/lecture/nQB9A/the-two-sample-
 
 ![image](https://user-images.githubusercontent.com/21141607/171132178-d7912a9f-e8bf-4a44-aeec-558c281fdabf.png)
 
+[CI for Binomial](https://sigmazone.com/binomial-confidence-intervals/)
 
