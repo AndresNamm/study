@@ -22,3 +22,4 @@ Binomial - You have n tries, how many succesful results you will get if the prob
 
 
 + [How to build Binomial Confidence Interval](https://www.statisticshowto.com/binomial-confidence-interval/)
++ [Binomial CI](https://sigmazone.com/binomial-confidence-intervals/)
