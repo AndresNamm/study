@@ -1,8 +1,8 @@
 
-+ [Statistical Power](https://www.youtube.com/watch?v=Rsc5znwR5FA)
-+ [Power Analysis, Clearly Explained](https://www.youtube.com/watch?v=VX_M3tIyiYk&t=50s)
 + [Multiple good examples on doing Power Analysis on Confidence Intervals and Hypothesis tests](https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_power/bs704_power_print.html)  
    + [Same but in HTML](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Power/) 
++ [Statistical Power](https://www.youtube.com/watch?v=Rsc5znwR5FA)
++ [Power Analysis, Clearly Explained](https://www.youtube.com/watch?v=VX_M3tIyiYk&t=50s)
 + [Pretty good article about effect size](https://github.com/AndresNamm/study/blob/main/statistics/effect_size.md)
 
 
