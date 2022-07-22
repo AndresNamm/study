@@ -1,3 +1,5 @@
+# Z TEST
+
 Z=(Sample Mean - Assumed mean)/SE
 
 Where SE is the standard deviation of the means over many samples based on CLT = std/sqrt(n)
@@ -8,11 +10,16 @@ Where SE is the standard deviation of the means over many samples based on CLT =
 
 # COMPARING 2 SAMPLES 
 
-https://www.coursera.org/learn/stanford-statistics/lecture/nQB9A/the-two-sample-z-test
+https://www.coursera.org/learn/stanford-statistics/lecture/nQB9A/the-two-Tsample-z-test
 
-+ Often you need to compare 2 samples with each other
++ Often you need to compare 2 samples with each other. E.g. take samples from 2 distributions
 
 ![image](https://user-images.githubusercontent.com/21141607/171132178-d7912a9f-e8bf-4a44-aeec-558c281fdabf.png)
 
 [CI for Binomial](https://sigmazone.com/binomial-confidence-intervals/)
 
+# T TEST 
+
+ t-test is a special form of Z test that has a small sample size. I has lower center and wider tails. E.g. when performing significance test, the 95,99 percentile are further from the mean due to potentially wider sample error. 
+ 
+ + [Coursera tutorial on t-test](https://www.coursera.org/learn/stanford-statistics/lecture/jYVrt/the-t-test)
