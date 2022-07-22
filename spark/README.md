@@ -1,3 +1,10 @@
+# BUCKETING AND PARTITIONING IN SPARK 
+
++ [Tutorial](https://selectfrom.dev/apache-spark-partitioning-bucketing-3fd350816911)
+    + Bucketing - Dividing the data into N rather equal sized objects. Also uses a bit of hashing
+    + Partitioning - storing the data in specific folder. (Sometimes in same location but maybe not always)
++ According to [this] and [this tutorial] Spark partition is located within 1 machine. When we speak about partitions its not necessarily the case. Here the folder structure is importand to more quickly find data. 
+
 # INTERACTING WITH COSMOSDB 
 
 
