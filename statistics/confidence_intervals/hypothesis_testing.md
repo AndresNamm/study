@@ -20,6 +20,7 @@ https://www.coursera.org/learn/stanford-statistics/lecture/nQB9A/the-two-Tsample
 
 # T TEST 
 
- t-test is a special form of Z test that has a small sample size. I has lower center and wider tails. E.g. when performing significance test, the 95,99 percentile are further from the mean due to potentially wider sample error. 
+ t-test is a special form of Z test that has a small sample size and also if there is no previous information about the standard deviation. I has lower center and wider tails. E.g. when performing significance test, the 95,99 percentile are further from the mean due to potentially wider sample error. 
  
+ + [Written Example of t-test](https://www.scribbr.com/statistics/t-distribution/)
  + [Coursera tutorial on t-test](https://www.coursera.org/learn/stanford-statistics/lecture/jYVrt/the-t-test)
