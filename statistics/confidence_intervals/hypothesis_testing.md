@@ -12,7 +12,7 @@ Where SE is the standard deviation of the means over many samples based on CLT =
 
 https://www.coursera.org/learn/stanford-statistics/lecture/nQB9A/the-two-Tsample-z-test
 
-+ Often you need to compare 2 samples with each other. E.g. take samples from 2 distributions. Here you need to calculate the difference
++ Often you need to compare 2 samples with each other. E.g. take samples from 2 distributions. Here you need to calculate the difference and see if its possible that the difference is likely if the data would come from the same distribution. Here we have to use the pooled standard deviations and assume the sample sizes for both datasets are the same. 
 
 ![image](https://user-images.githubusercontent.com/21141607/171132178-d7912a9f-e8bf-4a44-aeec-558c281fdabf.png)
 
