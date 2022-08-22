@@ -9,9 +9,15 @@
 # COMMENTS ON DOING POWER ANALYSIS ON HYPOTHESIS TESTING - CALCULATING EFFECT
 
 
+The aim of Power Analysis is to determine the necessary sample size to reject false H0 with probability 1-Beta. 1-Beta is otherwise referred to as **Power** 
+You set the Beta and it means the probability of making Type II error. Type II error is when you dont reject H0 when it is false. 
+1-Beta is something you set. Usually it is set to be 80% e.g. I want to detect H0 being false with probability 80 %. 
+
+ + General Formula for calculating the sample size for hypothesis testing     
+![image](https://user-images.githubusercontent.com/21141607/159645046-edadc1f9-1b0b-4a4c-8bdb-cf2b95b77da8.png)     
+ES = Effect Size You can think of this as what size effect IN REGARDS TO standard deviations you would like to be able to detect with Power 1-Beta. 
+Often (mean1-mean2)/std is used 
 [Good explanation of Effect Size](https://github.com/AndresNamm/study/blob/main/statistics/effect_size.md)
-ES = Effect Size (mean1-mean2)/std  
-![image](https://user-images.githubusercontent.com/21141607/159645046-edadc1f9-1b0b-4a4c-8bdb-cf2b95b77da8.png)
 
 
 **NB** One important thing to note there is a difference
