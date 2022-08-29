@@ -16,16 +16,17 @@ You set the Beta and it means the probability of making Type II error. Type II e
  + General Formula for calculating the sample size for hypothesis testing     
 ![image](https://user-images.githubusercontent.com/21141607/159645046-edadc1f9-1b0b-4a4c-8bdb-cf2b95b77da8.png)     
 
-ES = [ffect Size You can think of this as what size effect IN REGARDS TO standard deviations you would like to be able to detect with set Power. 
+ES = Effect Size You can think of this as what size effect IN REGARDS TO standard deviations you would like to be able to detect with set Power. 
 Often (mean1-mean2)/std is used. Std from the examples I have seen can be taken from literature or it can be pooled between 2 std from different groups.
 [I have written more about this here]([https://github.com/AndresNamm/study/blob/main/statistics/effect_size.md](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/effect_size.md)) 
 
 
-**NB** One important thing to note there is a **difference**
+**NB** One important thing to note there is a **difference** 
 
 + STD over sample means = std / sqrt(n)    
 + STD for data itself = std   - To calculate effect size we are using the std for the data. This can be from control group or found from literature. 
 
+For power analysis we are using the STD of data. We could not use the STD over saple means as n is what we are trying to determine.
 
 STD over samples gets smaller as the sample size grows. std for data remains the same as data itself varies.
 
