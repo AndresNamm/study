@@ -18,7 +18,7 @@ You set the Beta and it means the probability of making Type II error. Type II e
 
 ES = Effect Size You can think of this as what size effect IN REGARDS TO standard deviations you would like to be able to detect with set Power. 
 Often (mean1-mean2)/std is used. Std from the examples I have seen can be taken from literature or it can be pooled between 2 std from different groups.
-[I have written more about this here]([https://github.com/AndresNamm/study/blob/main/statistics/effect_size.md](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/effect_size.md)) 
+[I have written more about this here](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/effect_size.md)
 
 
 **NB** One important thing to note there is a **difference** 
