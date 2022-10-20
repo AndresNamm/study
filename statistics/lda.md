@@ -29,5 +29,7 @@ For each document
 
 # REFERENCES 
 
-
++ [Article about LDA implementation in Python](https://towardsdatascience.com/end-to-end-topic-modeling-in-python-latent-dirichlet-allocation-lda-35ce4ed6b3e0)
+  + [This Github repo implements the LDA](https://github.com/kapadias/mediumposts/tree/master/natural_language_processing/topic_modeling/notebooks)
 + [Original paper about LDA](https://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf)
++ [First answer tells that LDA is clustering with no word belonging to a certain category but a word belonging to a certain category with probability](https://www.quora.com/LDA-Topic-Modelling-output-what-do-the-output-values-represent)
