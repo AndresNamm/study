@@ -9,9 +9,13 @@
 In LDA the first assumption is that each document is created by drawing words from probability distributions. 
 
 
-## PROCESS
+# UNDERSTANDING THE LDA ARTICLE
 
+## FROM ARTICLE
 
+![image](https://user-images.githubusercontent.com/21141607/197138435-2d44c40f-60f7-4f1b-a9ea-6081215ccb5a.png)
+
+## IN MY WORDS
 **PHASE 1**
 
 For each document
@@ -25,6 +29,20 @@ For each document
 
   1. We pull the given topic $z_{n}$ from the $\theta$
   2. Then we pull a word from $w_{n}$ from P( $w_{n}$ | z_{n} , $\beta$  )  # This means we are pulling a specific word from the word matrix $\beta$ assuming we have chosen topic $z_{n}$
+
+
+## FROM ARTICLE 
+
+![image](https://user-images.githubusercontent.com/21141607/197141798-736051c9-9bcb-4a80-8704-515bbaf00f74.png)
+
+
+## MY EXPLANATION 
+
++ pdf (probability density function) vs pmf (probability mass function)
+
+![image](https://user-images.githubusercontent.com/21141607/197141940-3d0feb02-6a60-478e-bcc6-fd3fa19a56e3.png)
+
+
 
 # REFERENCES 
 
