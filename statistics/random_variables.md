@@ -19,7 +19,7 @@
 
 
 + Both HH and HT are $w$ ~ (sample outcome/realization/element) in $\Omega$ in the example above 
-+ The event is now a collection of $\w$ elements (Can be continous or discrete) and a subset of $\Omega$
++ The event is now a collection of elements from $\Omega$ $w$ (Can be continous or discrete) and a subset of $\Omega$
 
 
 + PMF 
