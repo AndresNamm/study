@@ -1,6 +1,16 @@
 
-# RANDOM VARIABLE 
+# PROBABILITY SPACE 
 
++ [Based on Larry Wasserman book](https://1drv.ms/b/s!ArMHhYJs5BG_jqNpgkG1LsFL-tdGgA?e=OCkjYR)
+
+![image](https://user-images.githubusercontent.com/21141607/198247389-696be406-ac9c-45b1-9040-2db549328e77.png)
+
+
++ Both HH and HT are $w$ ~ (sample outcome/realization/element) in $\Omega$ in the example above 
++ The event is now a collection of elements from $w \in \Omega$ (Can be continous or discrete) and a subset of $\Omega$
+
+
+# RANDOM VARIABLE 
 
 
 + [Explanation by Khan Academy](https://www.youtube.com/watch?v=3v9w79NhsfI)
@@ -13,14 +23,11 @@
 
 
 
-# PROBABILITY SPACE 
+# WHAT I WANT TO LEAR MORE ABOUT 
 
-![image](https://user-images.githubusercontent.com/21141607/198247389-696be406-ac9c-45b1-9040-2db549328e77.png)
++ Probability distribution 
++ pdf (probability density function) vs pmf (probability mass function)
+   + PMFs are used for Discrete variables . PDFs are used for Continuous random variables.  
 
-
-+ Both HH and HT are $w$ ~ (sample outcome/realization/element) in $\Omega$ in the example above 
-+ The event is now a collection of elements from $w \in \Omega$ (Can be continous or discrete) and a subset of $\Omega$
-
-
-+ PMF 
-+ PDF 
++ Cumulative Distribution function
++ Lisaks teen läbi mingi lihtsa tõenäosus ülesande selle kõige pinnalt 
