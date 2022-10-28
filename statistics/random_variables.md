@@ -8,7 +8,8 @@
 
 + Both HH and HT are $w$ ~ (sample outcome/realization/element/elementaarsündmus) in $\Omega$ in the example above. 
 + The event is now a collection of elements (1 element = $w) \in \Omega$ (Can be continous or discrete) and a subset of $\Omega$. We usually associate a probability with an Event. 
-
++  $w$ - assumption is that only 1 $w$ can be the result of an experiment. No overlap between diffferent $w$ s is possible
++  F - event room
 
 # RANDOM VARIABLE 
 
