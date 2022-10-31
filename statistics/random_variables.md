@@ -7,25 +7,56 @@
 
 
 + Both HH and HT are $w$ ~ (sample outcome/realization/element/elementaarsündmus) in $\Omega$ in the example above. 
-+ The event is now a collection of elements (1 element = $w) \in \Omega$ (Can be continous or discrete) and a subset of $\Omega$. We usually associate a probability with an Event. 
++ The event (Sündmus) is now a collection of elements (1 element = $w) \in \Omega$ (Can be continous or discrete) and a subset of $\Omega$. We usually associate a probability with an Event. 
 +  $w$ - assumption is that only 1 $w$ can be the result of an experiment. No overlap between diffferent $w$ s is possible
-+  F - event room
++ F - the event
++  space (sündmuste ruum) - Collection of multiple possible events (Tõenäosusteooria algkurus, Kalev Pärna, lk 29-30)
+   + Example 1: Flipping coin. In this case 1 possible F (event space) is { $\Omega$, $\emptyset$, {heads}, {tails} }
+   + Example 2: Taking 1 card from a deck. In this case possible F (event space) is with size of  $2^{\Omega}$
+   + PS - A member of F is **1 event**. This means a member of F can contain multiple sample outcomes aka multiple $w$.
 
-# RANDOM VARIABLE 
++   Probability space ($\Omega$,$P$,F)
 
+# DEFINING THE FUNCTION OF PROBABILITY 
+
++ Defined with letter P
++ P - assigns every event in F a certain probability 
++ Rules P 
+   + $P(\Omega) = 1$
+   + $P(\emptyset) = 0$
+   + $P(A) >= 0$
+   + If A and B are mutually exclusive then $P(A and B)=P(A)+P(B)$
+
+
+## SOME IMPORTANT DEDUCTIONS BASED ON PROBABILITY RULES 
+
++  $P(A)=1-P(A_opposite)$
+
+# RANDOM VARIABLE / JUHUSLIK SUURUS
+
++ Random variable is a function X: $\Omega$ -> $R$
++ Basically we have a collection of $w$ where each $w$ corrsponds to certain $x_{i}$ Each $x_{i}$ corresponds to an event $A_{i}$. 
++ As each w has only one corresponding $x_{i}$ the corresponding $A_{i}$ s will from a full system. Where $A_{i}$ $\cap$ $A_{j}$= $\emptyset$     
 
 + [Explanation by Khan Academy](https://www.youtube.com/watch?v=3v9w79NhsfI)
 
 ![image](https://user-images.githubusercontent.com/21141607/198245231-64e154ac-9201-4120-9a95-05a285a6f19b.png)
 
-+ [Discrete Random Variables vs Continuous Random varibles]https://www.youtube.com/watch?v=dOr0NKyD31Q
++ [Discrete Random Variables vs Continuous Random varibles](https://www.youtube.com/watch?v=dOr0NKyD31Q)
 
 ![image](https://user-images.githubusercontent.com/21141607/198245997-72a7ee1c-2887-4810-affc-cd279ae45321.png)
+
+# PROBABILYT DISTRIBUTIONS 
+
+
+## DISCRETE PROBABILITY DISTRIBUTIONS 
 
 
 
 # WHAT I WANT TO LEARN MORE ABOUT 
 
+
++  ~~F - event room~~ 
 + Probability distribution 
 + pdf (probability density function) vs pmf (probability mass function)
    + PMFs are used for Discrete variables . PDFs are used for Continuous random variables.  
