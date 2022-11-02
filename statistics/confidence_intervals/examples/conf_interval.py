@@ -4,13 +4,57 @@
 # + [Quick Reference to my fantastic CI tutorial](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/CONFIDENCE%20INTERVALS.pdf)
 # + [This code is based on this blog post](https://towardsdatascience.com/how-to-calculate-confidence-intervals-in-python-a8625a48e62b)    
 #
-# As you can see, we are taking the data from Uniform distribution. Due to the Central Limit Theorem (CLT) we can assume that its mean if taken as samples of size N will follow a normal distribution
-# with Std of $\frac{\sigma}{\sqrt{n}}$
+# We are taking the data from Uniform distribution. 
+# According to the CLT. Means of any other distribution will follow a normal distribution.
+# with std of $\frac{\sigma}{\sqrt{n}}$ where n is the sample size an $\sigma$ is the global std which usually is estimated by sample std. 
+# If we can say (based on CLT) that the sample emeans center around the global mean with std $\frac{\sigma}{\sqrt{n}}$ then based on the characteristics of normal distribution
+# we can also say that that 66 % percent of the means are +/- 1 std away from the global mean. ~95 % is ~2 std away from the global mean and ~99% means is 3 std away from global mean.
+# Thus if we have the sample mean and based on the sample size and sample std the std for the sample means, we can now say with specific confidence an interval where the means should be located. 
+
 # %%
+from dataclasses import dataclass
 import numpy as np 
 from scipy.stats import t,norm
 import math
 import matplotlib.pyplot as plt
+from dataclasses import dataclass
+
+
+@dataclass
+class ConfidenceInterval:
+    mean:float
+    lower_bound:float
+    upper_bound:float
+
+    def get_size(self)->float:
+        return self.upper_bound-self.lower_bound
+
+    def print_statistics(self):
+        print(f"Median: {self.mean}")
+        print(f"Min boundary {self.lower_bound}")   
+        print(f"Max boundary {self.upper_bound}")
+        print(f"Width is {self.get_size()}" )
+        print()
+
+def calculate_confidence_interval(sample_mean,sample_std,sample_size,confidence,test_type)->ConfidenceInterval:
+    alpha=1-confidence    
+    # Only thing that is different is the extremum value
+    if test_type == "t":
+        degrees_of_freedom=sample_size-1
+        extremum_val=np.abs(t.ppf(alpha/2,degrees_of_freedom)) # t_val - based on confidence we have chosen, how many standard distributions is the ci width. If Confidence is 95%, then std is  ~2
+    elif test_type == "z":
+        extremum_val=np.abs(norm.ppf(alpha/2)) # z_val - based on confidence we have chosen, how many standard distributions is the ci width. If Confidence is 95%, then std is ~2.  
+    else:
+        raise Exception("Wrong test type provided")
+    
+    print(f"{test_type} value is: {extremum_val}")
+    clt_based_std = sample_std / math.sqrt(sample_size) # The std for sample means. Calculated based on CLT 
+    max_expected_difference = extremum_val *  clt_based_std # std * (how many stds based on chosen confidence interval size)
+    return ConfidenceInterval(mean=sample_mean,lower_bound=sample_mean-max_expected_difference,upper_bound=sample_mean+max_expected_difference)
+
+
+
+
 
 x = np.random.uniform(size=100) 
 x_positive = x-min(x)
@@ -19,31 +63,39 @@ x = x_scaled
 m = x.mean()
 s = x.std()
 sample_size=len(x)
-confidence = 0.99 
-alpha = 1-confidence
+confidence=0.95
+
+
+print(f"Sample size: {sample_size}, Sample std: {s}, Max value {max(x)}, Min value: {min(x)}")
+print()
+
+ci_z=calculate_confidence_interval(sample_mean=m,sample_std=s,sample_size=sample_size,confidence=confidence,test_type='z')
+ci_z.print_statistics()
+ci_t=calculate_confidence_interval(sample_mean=m,sample_std=s,sample_size=sample_size,confidence=confidence,test_type='t')
+ci_t.print_statistics()
+
+print(f"Differences in CI size ci_t-ci_z {ci_t.get_size()-ci_z.get_size()}")
+
+
+
 
 # %% [markdown]
-# z_val - Where in the standard normal distribution a value outside the confidence interval would be located. As standard deviation within the standardized normal distribution
-# is 1 then z_val tells how many standard deviations in a **standard** normal distribution the value should go away from the mean to not fall inside the range of confidence inteval.
+# z_val - Where in the standard normal distribution a value outside the 
+# confidence interval would be located.
+# As standard deviation within the standardized normal distribution
+# is 1 then z_val tells how many standard deviations in a **standard** 
+# normal distribution the value should go away from the mean to not fall 
+# inside the range of confidence inteval.
 #%%
+
 z_val = np.abs(norm.ppf((alpha)/2))
 sample_size=len(x)
 confidence = 0.99 
-alpha = 1-confidence
-ci_std = (s/math.sqrt(sample_size)) # FROM THE CLT
-min_b = m - z_val * ci_std
-max_b = m + z_val * ci_std
 
-def print_statistics(m:float,s:float,sample_size:int,confidence:float,min_b:float,max_b:float):
-    print(f"Median: {m}")
-    print(f"Std: {s}")
-    print(f"Sample Size: {sample_size}")
-    print(f"Confidence: {confidence}")
-    print(f"Min boundary {min_b}")   
-    print(f"Max boundary {max_b}")
-    print(f"Width is {max_b-min_b}" )
 
-print_statistics(m=m,s=s,sample_size=sample_size,confidence=confidence,min_b=min_b,max_b=max_b)
+
+
+print_statistics(m=m,s=s,sample_size=sample_size,confidence=confidence,min_b=z_min_b,max_b=z_max_b)
 # %% [markdown]
 # # T distribution
 #     
@@ -66,31 +118,51 @@ print_statistics(m=m,s=s,sample_size=sample_size,confidence=confidence,min_b=min
 # %%
 degrees_of_freedom = len(x)-1
 t_val = np.abs(t.ppf((alpha)/2,degrees_of_freedom))
-
-# %% [markdown]
-# sample_size now determines the confidence interval width
-# %%
 ci_std = (s/math.sqrt(sample_size)) # FROM THE CLT 
 t_min_b = m - t_val * ci_std
 t_max_b = m + t_val * ci_std
 
-
 print_statistics(m=m,s=s,sample_size=sample_size,confidence=confidence,min_b=t_min_b,max_b=t_max_b)
 
+
+
+#%% 
+
+print(x.shape)
 #%% [markdown] 
 # I will now show an example how Uniform distribution means will follow a normal distribution. 
 ## Uniform distribution from 100*100 Sample
+
+
+#%%
 nr_samples = 100
 sample_size = 100
-full_dataset = np.empty([1,10])
-print(full_dataset)
-#%%
+full_dataset = np.array([])
+
+
 
 for i in range(nr_samples):
     x = np.random.uniform(size=sample_size) 
     x_positive = x-min(x)
     x_scaled = x_positive/max(x_positive)*100
     x = x_scaled
+    full_dataset = np.append(full_dataset,x)
+
+len(full_dataset)
+
+
+
+#%% 
+counts, bins = np.histogram(full_dataset)
+plt.hist(bins[:-1],len(bins)-1,weights=counts)
+plt.axvline(m, color='k', linestyle='dashed', linewidth=1)
+plt.axvline(m+s, color='r', linestyle='dashed', linewidth=1)
+plt.axvline(m-s, color='r', linestyle='dashed', linewidth=1)
+min_ylim, max_ylim = plt.ylim()
+plt.text(m*1.1, max_ylim*0.95, 'Mean: {:.2f}'.format(full_dataset.mean())) 
+plt.text((m+s)*1.1, max_ylim*0.9, 'Mean+Std: {:.2f}'.format(m+s)) 
+plt.text((m-s)*1.1, max_ylim*0.9, 'Mean+Std: {:.2f}'.format(m-s)) 
+
 
 
 
