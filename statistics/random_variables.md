@@ -56,7 +56,7 @@
 
 ## DISCRETE PROBABILITY DISTRIBUTIONS 
 
-+ A combination of ($p_{i},x_{i}$)
++ A combination of ( $p_{i}$, $x_{i}$)
 
 # WHAT I WANT TO LEARN MORE ABOUT 
 
