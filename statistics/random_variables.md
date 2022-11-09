@@ -58,6 +58,18 @@
 
 + A combination of ( $p_{i}$, $x_{i}$)
 
++ Uses PMF - probability **mass** function
+
+
+
+## CONTINUOUS PROBABILITY DISTRIBUTIONS
+
++ [Uses PDF - probability density function](https://www.statlect.com/glossary/probability-density-function)
+    + [Characteristics of probability Density Functions](https://www.statlect.com/fundamentals-of-probability/legitimate-probability-density-functions)
+      + Positive
+      + Integrate to 1 
+
+
 # WHAT I WANT TO LEARN MORE ABOUT 
 
 
@@ -67,3 +79,8 @@
    + PMFs are used for Discrete variables . PDFs are used for Continuous random variables.  
 + Cumulative Distribution function
 + Lisaks teen läbi mingi lihtsa tõenäosus ülesande selle kõige pinnalt 
+
+
+# GENERAL REFERENCE 
+
++ [Course about probability theory, distibutions, stas, ML](https://www.statlect.com/)
