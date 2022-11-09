@@ -162,11 +162,50 @@ take_sample_and_show(means)
 
 
 #%% [markdown]
-# # Theroy - Shape Difference between t-distribution and normal distribution
+# # Theory - Shape Difference between t-distribution and normal distribution
 # Additional note. In this experiment we are showcasing Normal Distribution based confidence intervals and T-Distribution based confidence intervals.
-# Based on CLT we are assuming in general a normal distribution to the means of data, however when the sample sizes are small its better to assume a variant 
-# of normal distribution that has wider tails (t-distribution). 
+# Based on CLT we are assuming in general a normal distribution to the means of data, however when the sample sizes are small, it is better to assume a variant 
+# of normal distribution that has wider tails (t-distribution) on top of the data. 
 # the t-distribution has wider tails with smaller sample sizes. With sample sizes 30 t-distribution starts to follow the normal distribution. 
 # The distribution assumption for the mean data is important because based on that we calculate the extremum values (t/z). 
 # For Normal distribution we assume the 66% of data to be within 1 std from mean, 95 % data to be wtihin ~2 std from mean, 99% of data to be within ~2.3 std from the mean.
 # For t-distribution the amount of standard distributions we need for any of (66%,95%,99%) are wider based on the sample size. In t-distribution we call this "degrees of freedom"
+
+
+t_dist = np.random.standard_t(10,11)
+t_counts, t_bins = np.histogram(t_dist)
+fig, ax = plt.subplots()
+ax.hist(t_bins[:-1],len(t_bins)-1,weights=t_counts)
+ax.set_title('T Distribution')
+#ax.axvline(sample_ci_z.upper_bound, color=z_color, linestyle='dashed', linewidth=1)
+
+n_dist = np.random.normal(0,1,11)
+n_counts,n_bins = np.histogram(n_dist)
+fig1, ax1 = plt.subplots()
+ax1.hist(n_bins[:-1],len(n_bins)-1,weights=n_counts)
+
+
+# %% [markdown]
+# We are performing a t test in this case. 
+intake = np.array([5260., 5470, 5640, 6180, 6390, 6515, 6805, 7515, \
+                   7515, 8230, 8770])
+# https://numpy.org/doc/stable/reference/random/generated/numpy.random.standard_t.html
+# Calculate standadized t value for the current intake 
+mean_t_val =  (np.mean(intake) - 7725) / (intake.std(ddof=1)/np.sqrt(len(intake)))
+sample = np.random.standard_t(len(intake)-1,10000)
+
+print(mean_t_val)
+extremum_val=np.abs(t.ppf(0.05,10))
+
+print(extremum_val)
+# Where would the t be in the samples 
+# Compare the with all the 10000 samples and get the percentage of times
+# it is over the val. If this
+percentage_of_mean_occuring = np.sum(np.abs(extremum_val) < np.abs(sample)) / float(len(sample))*100
+print(f"{percentage_of_mean_occuring}")
+
+
+# %%
+np.abs(sample)
+
+# %%
