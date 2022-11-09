@@ -60,6 +60,7 @@
 
 + Uses PMF - probability **mass** function
 
++ Variance ![image](https://user-images.githubusercontent.com/21141607/200790086-79cbaa07-4cbd-43b8-8919-f7e412e1d885.png)
 
 
 ## CONTINUOUS PROBABILITY DISTRIBUTIONS
@@ -69,6 +70,7 @@
       + Positive
       + Integrate to 1 
 
++ Variance ![image](https://user-images.githubusercontent.com/21141607/200790442-32f4180d-0fe4-44c3-8ac9-905d2e876b73.png)
 
 # WHAT I WANT TO LEARN MORE ABOUT 
 
