@@ -60,7 +60,8 @@
 
 + Uses PMF - probability **mass** function
 
-+ Variance ![image](https://user-images.githubusercontent.com/21141607/200790086-79cbaa07-4cbd-43b8-8919-f7e412e1d885.png)
++ Variance ![image](https://user-images.githubusercontent.com/21141607/200790086-79cbaa07-4cbd-43b8-8919-f7e412e1d885.png) 
++ [More info about variance - look into Discrete Random Variables part](https://www.statlect.com/glossary/variance-formula)
 
 
 ## CONTINUOUS PROBABILITY DISTRIBUTIONS
@@ -71,6 +72,8 @@
       + Integrate to 1 
 
 + Variance ![image](https://user-images.githubusercontent.com/21141607/200790442-32f4180d-0fe4-44c3-8ac9-905d2e876b73.png)
++ [More info about variance - look into continuous Random Variables part](https://www.statlect.com/glossary/variance-formula)
+
 
 # WHAT I WANT TO LEARN MORE ABOUT 
 
