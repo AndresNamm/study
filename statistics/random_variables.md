@@ -75,6 +75,15 @@
 + [More info about variance - look into continuous Random Variables part](https://www.statlect.com/glossary/variance-formula)
 
 
+## STANDARDIZATION 
+![image](https://user-images.githubusercontent.com/21141607/201044628-6c509cf1-c3a7-4e89-a138-c7fd5629d657.png)
+
++ Standardizing is the process of making the mean of the dataset=0 and the std=1 
++ When we substract mean from every variable it is intuitivel clear that the new mean shifted towards 0 
++ With STD ist more complex 
+   + [Claim with practical example that you can standardize any distribution](https://stats.stackexchange.com/questions/365164/standardization-of-non-normal-features)    + [Claims that any distribution can be standardized to have mean 0 and std=1](https://365datascience.com/tutorials/statistics-tutorials/standardization/)
+      +  I think of this like that.  The standardization takes the mean of every variable and divides this with old standard distribution (Average deviation from the mean) .. If we now take every deviation from this mean and divide it by the average deviation and sum it up similiarly. 
+
 # WHAT I WANT TO LEARN MORE ABOUT 
 
 
