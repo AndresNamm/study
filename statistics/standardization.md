@@ -21,7 +21,8 @@ For std - we take the the square root of the weighted average of the squared dis
 
 [Side note about this thing](https://github.com/AndresNamm/study/blob/main/calculus/summation_sqrt.md) These are not inverse operations!!! 
 
-+ Why do we use squaring?
++ Why do we use squaring?      
+
 ![image](https://user-images.githubusercontent.com/21141607/201306101-607179d8-4056-4bbc-881c-a8c35cda1104.png)
 ** source https://stats.stackexchange.com/questions/118/why-square-the-difference-instead-of-taking-the-absolute-value-in-standard-devia
 
@@ -29,7 +30,12 @@ For std - we take the the square root of the weighted average of the squared dis
 **Standardization of STD**    
 
 
-+ **INTUITIVELY** The standardization takes every variables distance from the mean. Then it divides this distance for all the variables with standard deviation which sort of represents the **average deviation from mean**. This is how the new standerd deviation ( **sort of average deviation from the mean**) becomes 1 . In some way we just an inverse operation here when we are divigd
++ **INTUITIVELY** The standardization takes every variables distance from the mean. Then it divides this distance for all the variables with standard deviation which sort of represents the **average deviation from mean for all the variables**. This is how the new standerd deviation  becomes 1 . In some way we just an inverse operation here when we divide with avergae.      
+
+![image](https://user-images.githubusercontent.com/21141607/201309442-f73d7707-3150-4fbc-ac4f-c70b1eacbdb1.png)
+
+
+
 + **Algebraic example how this makes the new standard deviation go to 1**
 ![image](https://user-images.githubusercontent.com/21141607/201306556-a1bcba09-a768-4248-919a-6f32bef68f2c.png)
 
