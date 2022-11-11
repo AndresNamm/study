@@ -8,16 +8,16 @@
 
 ** First lets definte STD
 
-STD= $\sqrt[2]{VAR[X]}$\
+STD= $\sqrt[2]{VAR[X]}$\      
 
-** Variance for discrete **
-![image](https://user-images.githubusercontent.com/21141607/201299573-6b13b125-3e73-4482-90f6-b46914bbdbbc.png)
-** Variance for continuous**
-![image](https://user-images.githubusercontent.com/21141607/201299543-4479a0c7-b0f7-491e-ab0a-808eee6928be.png)
+**Variance for discrete**      
+![image](https://user-images.githubusercontent.com/21141607/201299573-6b13b125-3e73-4482-90f6-b46914bbdbbc.png)       
+**Variance for continuous**        
+![image](https://user-images.githubusercontent.com/21141607/201299543-4479a0c7-b0f7-491e-ab0a-808eee6928be.png)     
 
 
-+ Intuitively, for variance we get the squared distance from the mean and sum the weighted average for the squared distance. 
-For std - we take the the square root of the weighted average of the squared distance. ()
++ Intuitively, for variance we sum the weighted average for the squared distance. 
+For std - we take the the square root of the weighted average of the squared distance. [Side not about this thing]()
 
 
  +The standardization takes every variables distance from the mean. Then it divides this distance for all the variables with standard deviation  
