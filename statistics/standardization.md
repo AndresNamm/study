@@ -3,8 +3,8 @@
 
 + Standardizing is the process of making the mean of the dataset=0 and the std=1 
 + When we substract mean from every variable it is intuitive clear that the new mean shifts towards 0 
-## With STD ist more complex 
 
+## With STD ist more complex 
 
 ** First lets definte STD
 
@@ -26,9 +26,7 @@ For std - we take the the square root of the weighted average of the squared dis
 ** source https://stats.stackexchange.com/questions/118/why-square-the-difference-instead-of-taking-the-absolute-value-in-standard-devia
 
 
-
-+ Standardization 
-
+**Standardization of STD**    
 
 
 + **INTUITIVELY** The standardization takes every variables distance from the mean. Then it divides this distance for all the variables with standard deviation which sort of represents the **average deviation from mean**. This is how the new standerd deviation ( **sort of average deviation from the mean**) becomes 1 . In some way we just an inverse operation here when we are divigd
@@ -37,11 +35,9 @@ For std - we take the the square root of the weighted average of the squared dis
 
 
 
+## REFERENCES
 
-
-
-+   and divides this with old standard distribution (Average deviation from the mean) 
- +  If we now take every deviation from this mean and divide it by the average deviation and sum it up similiarly. 
- + [Claim with practical example that you can standardize any distribution](https://stats.stackexchange.com/questions/365164/standardization-of-non-normal-features)    
- + [Claims that any distribution can be standardized to have mean 0 and std=1](https://365datascience.com/tutorials/statistics-tutorials/standardization/)
++ [Proof for Standardizing leading to std 1 for Discrete distributions](https://math.stackexchange.com/questions/1550194/how-do-i-prove-standardizing-a-normally-distributed-random-variable)
++ [Claim with practical example that you can standardize any distribution](https://stats.stackexchange.com/questions/365164/standardization-of-non-normal-features)    
++ [Claims that any distribution can be standardized to have mean 0 and std=1](https://365datascience.com/tutorials/statistics-tutorials/standardization/)
    
