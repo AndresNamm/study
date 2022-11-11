@@ -17,7 +17,7 @@ STD= $\sqrt[2]{VAR[X]}$\
 
 
 + Intuitively, for variance we sum the weighted average for the squared distance. 
-For std - we take the the square root of the weighted average of the squared distance. [Side not about this thing]()
+For std - we take the the square root of the weighted average of the squared distance. [Side note about this thing](https://github.com/AndresNamm/study/blob/main/calculus/summation_sqrt.md) These are not inverse operations!!! 
 
 
  +The standardization takes every variables distance from the mean. Then it divides this distance for all the variables with standard deviation  
