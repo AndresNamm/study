@@ -46,4 +46,5 @@ For std - we take the the square root of the weighted average of the squared dis
 + [Proof for Standardizing leading to std 1 for Discrete distributions](https://math.stackexchange.com/questions/1550194/how-do-i-prove-standardizing-a-normally-distributed-random-variable)
 + [Claim with practical example that you can standardize any distribution](https://stats.stackexchange.com/questions/365164/standardization-of-non-normal-features)    
 + [Claims that any distribution can be standardized to have mean 0 and std=1](https://365datascience.com/tutorials/statistics-tutorials/standardization/)
++ [Continue Reading about standard distribution and standardization](https://github.com/AndresNamm/study/blob/main/statistics/normal_distribution.md)
    
