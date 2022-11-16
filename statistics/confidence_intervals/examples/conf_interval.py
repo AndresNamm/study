@@ -1,9 +1,7 @@
-
 # %% [markdown]
 # # Confidence Intervals
 # + [Quick Reference to my fantastic CI tutorial](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/CONFIDENCE%20INTERVALS.pdf)
 # + [This code is based on this blog post](https://towardsdatascience.com/how-to-calculate-confidence-intervals-in-python-a8625a48e62b)    
-#
 # We are taking the data from Uniform distribution. 
 # According to the Central Limit Theorem (CLT). Means of any distribution will follow a normal distribution.
 # with std of $\frac{\sigma}{\sqrt{n}}$ where n is the sample size and $\sigma$ is the global std which usually is estimated by sample std. 
@@ -19,6 +17,7 @@ import math
 import matplotlib.pyplot as plt
 from dataclasses import dataclass
 
+#%% 
 @dataclass
 class ConfidenceInterval:
     mean:float
@@ -74,10 +73,6 @@ CONFIDENCE=0.99
 x, ci_z, ci_t = perform_comparison(sample_size=SAMPLE_SIZE,confidence=0.95)
 print(f"Sample size: {SAMPLE_SIZE}, Sample std: {x.std()}, Confidence {CONFIDENCE}, Max value {max(x)}, Min value: {min(x)}")
 
-
-# plt.text((m+s)*1.1, max_ylim*0.9, 'Mean+Std: {:.2f}'.format(m+s)) 
-# plt.text((m-s)*1.1, max_ylim*0.9, 'Mean+Std: {:.2f}'.format(m-s)) 
-
 ci_z.print_statistics()
 ci_t.print_statistics()
 print(f"Differences in CI size ci_t-ci_z {ci_t.get_size()-ci_z.get_size()}")
@@ -113,7 +108,9 @@ means = np.asarray(means)
 plot_default_histogram(means,bins=50,start=30,end=70)
 #%% [markdown]    
 # Lets now take a few additional  samples to show how we derive the confidence interval from 1 sample. 
-# **Run this cell at least 5 times to see how the confidence intervals are generated for each sample**
+# **Run the cells below at least 5 times to see how the confidence intervals are generated for each sample**
+
+#%% [markdown]  
 # **ADDITIONAL SAMPLE 1 COMPARED TO MEAN**
 
 # %% 
@@ -160,19 +157,18 @@ take_sample_and_show(means)
 take_sample_and_show(means)
 
 
-
 #%% [markdown]
 # # Theory - Shape Difference between t-distribution and normal distribution
 # Additional note. In this experiment we are showcasing Normal Distribution based confidence intervals and T-Distribution based confidence intervals.
 # Based on CLT we are assuming in general a normal distribution to the means of data, however when the sample sizes are small, it is better to assume a variant 
-# of normal distribution that has wider tails (t-distribution) on top of the data. 
+# of normal distribution that has wider tails/proportionally less data in the middle (t-distribution).
 # the t-distribution has wider tails with smaller sample sizes. With sample sizes 30 t-distribution starts to follow the normal distribution. 
-# The distribution assumption for the mean data is important because based on that we calculate the extremum values (t/z). 
+# The distribution assumption for the mean data is important because based on that we calculate the extremum values (t or z). 
 # For Normal distribution we assume the 66% of data to be within 1 std from mean, 95 % data to be wtihin ~2 std from mean, 99% of data to be within ~2.3 std from the mean.
 # For t-distribution the amount of standard distributions we need for any of (66%,95%,99%) are wider based on the sample size. In t-distribution we call this "degrees of freedom"
 
-
-t_dist = np.random.standard_t(10,11)
+sample_size = 100
+t_dist = np.random.standard_t(sample_size, 1000)
 t_counts, t_bins = np.histogram(t_dist)
 fig, ax = plt.subplots()
 ax.hist(t_bins[:-1],len(t_bins)-1,weights=t_counts)
@@ -182,30 +178,51 @@ ax.set_title('T Distribution')
 n_dist = np.random.normal(0,1,11)
 n_counts,n_bins = np.histogram(n_dist)
 fig1, ax1 = plt.subplots()
-ax1.hist(n_bins[:-1],len(n_bins)-1,weights=n_counts)
+l=ax1.hist(n_bins[:-1],len(n_bins)-1,weights=n_counts)
 
 
 # %% [markdown]
-# We are performing a t test in this case. 
+# We are performing a T test in this case. 
+# https://numpy.org/doc/stable/reference/random/generated/numpy.random.standard_t.html
+
+# %% [markdown]
+# We have a sample called "intake". From previous results we have knowledge that that the global mean is 7725. 
+# Based on this we form hypotheses
+# + H0 - "intake" mean is not significantly larger. 
+# + H1 - "intake" mean is significantly larger.
+# We set the significance standard level to 5%. Because we are looking at differences both smaller and larger, this is going to be 
+# a two sided t-test. E.g we will look if the mean extracted from this sample does not fall into the 95% Confidence interval of the samples(size=11) from distribution with mean 7725 
+# E.g on both sides only roughly 2.5 percent of values are larger/smaller than it. 
 intake = np.array([5260., 5470, 5640, 6180, 6390, 6515, 6805, 7515, \
                    7515, 8230, 8770])
-# https://numpy.org/doc/stable/reference/random/generated/numpy.random.standard_t.html
-# Calculate standadized t value for the current intake 
-mean_t_val =  (np.mean(intake) - 7725) / (intake.std(ddof=1)/np.sqrt(len(intake)))
-sample = np.random.standard_t(len(intake)-1,10000)
+assumed_global_mean = 7725
+# %% [markdown] 
+# To get "intake" means t-value compared with the "assumed_global_mean" we are standardizing it. 
+# The formula for this is $\frac{X - \mu}{\sigma}$. 'As we are looking at the distribution over means, 
+# based on CLT the $\sigma=\frac{\sigma}{\sqrt{n}}$. CLT assumes $\sigma$ to be the global 
+# STD but in our case we have taken the sample std as the estimate. To make it a bit larger,
+# we have taken the std to be with only degrees of freedom=1. This reduces the t-value as it makes 
+# the element below the fraction to be larger.
+t_val =  (np.mean(intake) - assumed_global_mean) / (intake.std(ddof=1)/np.sqrt(len(intake)))
 
-print(mean_t_val)
-extremum_val=np.abs(t.ppf(0.05,10))
+# %% [markdown]
+# In this case we are taking 1000000 samples from **standard** t distribution with 10 degrees of freedom. Then we are a just comparing
+# our calculated t-value for the "intake" mean with all the samples and finding the fraction our t_value is smaller 
+# than the sample element. Basically, if our calculated t-value is very large, this should happen very few times.
+# Infact less than 0.025 time
+degrees_of_freedom=len(intake)-1
+alpha=1-0.95
+extremum_val=float(np.abs(t.ppf(alpha/2,degrees_of_freedom))) # PPF Percent Point Function. The percent point function (ppf) is the inverse of the cumulative distribution function. https://www.itl.nist.gov/div898/handbook/eda/section3/eda362.htm
 
-print(extremum_val)
-# Where would the t be in the samples 
-# Compare the with all the 10000 samples and get the percentage of times
-# it is over the val. If this
-percentage_of_mean_occuring = np.sum(np.abs(extremum_val) < np.abs(sample)) / float(len(sample))*100
-print(f"{percentage_of_mean_occuring}")
-
-
-# %%
-np.abs(sample)
-
-# %%
+s = np.random.standard_t(df=degrees_of_freedom,size=1000000)
+h = plt.hist(s, bins=100, density=True)
+comparison=np.sum(np.abs(t_val) < np.abs(s)) / float(len(s))
+print(f"Probability of having a more extreme value than t_val:{t_val} is {comparison} < 0.025")
+plt.axvline(t_val, color='k', linestyle='dashed', linewidth=1)
+plt.axvline(-extremum_val, color='r', linestyle='dashed', linewidth=1)
+plt.axvline(extremum_val, color='r', linestyle='dashed', linewidth=1)
+min_ylim, max_ylim = plt.ylim()
+plt.text(t_val*1.7, max_ylim*0.95, 't_val') 
+plt.text(-extremum_val*0.9, max_ylim*0.95, 'ci-') 
+plt.text(extremum_val*1.1, max_ylim*0.95, 'ci+') 
+# %% [markdown]
