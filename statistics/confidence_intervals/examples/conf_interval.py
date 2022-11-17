@@ -6,9 +6,8 @@
 # According to the Central Limit Theorem (CLT). Means of any distribution will follow a normal distribution.
 # with std of $\frac{\sigma}{\sqrt{n}}$ where n is the sample size and $\sigma$ is the global std which usually is estimated by sample std. 
 # If we can say (based on CLT) that the sample means center around the global mean with std $\frac{\sigma}{\sqrt{n}}$ then based on the characteristics of normal distribution
-# we can also say that that 66 % percent of the means are +/- 1 std away from the global mean. ~95 % is ~2 std away from the global mean and ~99% means is 3 std away from global mean.
+# we can also say that that 66 % percent of the means are +/- 1 std away from the global mean. ~95 % is ~2 std away from the global mean and ~99% means is 2.3 std away from global mean.
 # Thus if we have the sample mean and based on the sample size and sample std, the std for the sample means, we can now say the interval where (66%,95%,99%) of the means should be located. 
-
 
 # %%
 import numpy as np 
@@ -65,14 +64,13 @@ def perform_comparison(sample_size:int, confidence:float):
 
 
 
-#%% [markdown] Lets perform 1 sample experiment with data generated from Uniform distribution. 
+#%% [markdown] 
+# Lets take 1 sample with size SAMPLE_SIZE from the Uniform distribution and plot this sample
 
-#%%
 SAMPLE_SIZE=5
 CONFIDENCE=0.99
 x, ci_z, ci_t = perform_comparison(sample_size=SAMPLE_SIZE,confidence=0.95)
 print(f"Sample size: {SAMPLE_SIZE}, Sample std: {x.std()}, Confidence {CONFIDENCE}, Max value {max(x)}, Min value: {min(x)}")
-
 ci_z.print_statistics()
 ci_t.print_statistics()
 print(f"Differences in CI size ci_t-ci_z {ci_t.get_size()-ci_z.get_size()}")
@@ -87,6 +85,7 @@ def plot_default_histogram(x,bins=40,start=0,end=100):
     # plt.axvline(m-s, color='r', linestyle='dashed', linewidth=1)
     min_ylim, max_ylim = plt.ylim()
     plt.text(x.mean()*1.01, max_ylim*0.95, 'Mean: {:.2f}'.format(x.mean())) 
+    plt.title("Sample from uniform distribution")
 
 plot_default_histogram(x)
 
@@ -95,7 +94,7 @@ plot_default_histogram(x)
 # Then we plot the means of these 1000 samples. Based on the Central Limit Theorem (CLT) this distribution should now be a normal distribution with ~ global mean and the standard distribution 
 # $\frac{\sigma}{\sqrt{n}}$ where $\sigma$= Global STD (Can be estimated by sample std/Bootstrapping)  and n is sample size for 1 sample. 
 # **PS! In reality we almost always limit our experiment with taking 1 sample only. The 1000 sample setup only aims to showcase 
-# how Central Limit Theorem turns any distribution (in this case Uniform) into Normal Distribution (With smaller samples t distribution) with sample mean as the global mean and std $\frac{\sigma}{\sqrt{n}}$ **
+# how Central Limit Theorem turns any distribution (in this case Uniform) into Normal Distribution (With smaller samples t distribution) with sample mean as the global mean and std $\frac{\sigma}{\sqrt{n}}$**
 
 
 # %% 
@@ -112,8 +111,6 @@ plot_default_histogram(means,bins=50,start=30,end=70)
 
 #%% [markdown]  
 # **ADDITIONAL SAMPLE 1 COMPARED TO MEAN**
-
-# %% 
 def take_sample_and_show(means):
     x_sample, sample_ci_z, sample_ci_t = perform_comparison(sample_size=SAMPLE_SIZE,confidence=0.95)
     plot_default_histogram(means,bins=50,start=30,end=70)
@@ -167,22 +164,31 @@ take_sample_and_show(means)
 # For Normal distribution we assume the 66% of data to be within 1 std from mean, 95 % data to be wtihin ~2 std from mean, 99% of data to be within ~2.3 std from the mean.
 # For t-distribution the amount of standard distributions we need for any of (66%,95%,99%) are wider based on the sample size. In t-distribution we call this "degrees of freedom"
 
-sample_size = 100
-t_dist = np.random.standard_t(sample_size, 1000)
-t_counts, t_bins = np.histogram(t_dist)
-fig, ax = plt.subplots()
-ax.hist(t_bins[:-1],len(t_bins)-1,weights=t_counts)
-ax.set_title('T Distribution')
-#ax.axvline(sample_ci_z.upper_bound, color=z_color, linestyle='dashed', linewidth=1)
+sample_size = 10
+t_dist = np.random.standard_t(sample_size-1, 10000,)*100
+n_dist = np.random.normal(0,1,10000)*100
 
-n_dist = np.random.normal(0,1,11)
-n_counts,n_bins = np.histogram(n_dist)
-fig1, ax1 = plt.subplots()
-l=ax1.hist(n_bins[:-1],len(n_bins)-1,weights=n_counts)
+t_counts, t_bins = np.histogram(t_dist,50)
+n_counts, n_bins = np.histogram(n_dist,50)
+plot1=plt.hist(t_bins[:-1],len(t_bins)-1,weights=t_counts,color="g",label="t")
+plot2=plt.hist(n_bins[:-1],len(n_bins)-1,weights=t_counts,color="r",alpha=0.8,label="norm")
+legend=plt.legend(('t','norm'))
 
+#%% [markdown]
+# When t-distribution sample size grows however, we can see that the normal distribution
+# and t-distribution difference is not so big anymore
 
+sample_size = 30
+t_dist = np.random.standard_t(sample_size-1, 10000,)*100
+n_dist = np.random.normal(0,1,10000)*100
+
+t_counts, t_bins = np.histogram(t_dist,50)
+n_counts, n_bins = np.histogram(n_dist,50)
+plot1=plt.hist(t_bins[:-1],len(t_bins)-1,weights=t_counts,color="g",label="t")
+plot2=plt.hist(n_bins[:-1],len(n_bins)-1,weights=t_counts,color="r",alpha=0.8,label="norm")
+legend=plt.legend(('t','norm'))
 # %% [markdown]
-# We are performing a T test in this case. 
+# # T-TEST with T distribution 
 # https://numpy.org/doc/stable/reference/random/generated/numpy.random.standard_t.html
 
 # %% [markdown]
