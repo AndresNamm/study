@@ -77,7 +77,7 @@ print(f"Differences in CI size ci_t-ci_z {ci_t.get_size()-ci_z.get_size()}")
 
 # PLOT THE GENERATED DISTRIBUTION X
 
-def plot_default_histogram(x,bins=40,start=0,end=100):
+def plot_default_histogram(x,bins=40,start=0,end=100,title="Distribution over sample means from uniform distribution"):
     counts, bins = np.histogram(x,bins=bins)
     plt.hist(bins[:-1],len(bins)-1,weights=counts,range=(start,end))
     plt.axvline(x.mean(), color='k', linestyle='dashed', linewidth=1)
@@ -85,9 +85,9 @@ def plot_default_histogram(x,bins=40,start=0,end=100):
     # plt.axvline(m-s, color='r', linestyle='dashed', linewidth=1)
     min_ylim, max_ylim = plt.ylim()
     plt.text(x.mean()*1.01, max_ylim*0.95, 'Mean: {:.2f}'.format(x.mean())) 
-    plt.title("Sample from uniform distribution")
+    plt.title(title)
 
-plot_default_histogram(x)
+plot_default_histogram(x,title="Sample from uniform distribution")
 
 # %% [markdown]
 # Now we perform this experiment 1000 times and see how the distribution of means will look like. E.g. we take the sample with size sample_size (set above) and we do this 1000 times. 
@@ -222,8 +222,8 @@ extremum_val=float(np.abs(t.ppf(alpha/2,degrees_of_freedom))) # PPF Percent Poin
 
 s = np.random.standard_t(df=degrees_of_freedom,size=1000000)
 h = plt.hist(s, bins=100, density=True)
-comparison=np.sum(np.abs(t_val) < np.abs(s)) / float(len(s))
-print(f"Probability of having a more extreme value than t_val:{t_val} is {comparison} < 0.025")
+probability=np.sum(np.abs(t_val) < np.abs(s)) / float(len(s))
+print(f"Probability of having a more extreme value than t_val:{t_val} is {probability} < 0.025")
 plt.axvline(t_val, color='k', linestyle='dashed', linewidth=1)
 plt.axvline(-extremum_val, color='r', linestyle='dashed', linewidth=1)
 plt.axvline(extremum_val, color='r', linestyle='dashed', linewidth=1)
