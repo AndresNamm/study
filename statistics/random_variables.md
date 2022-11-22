@@ -43,6 +43,13 @@
 + Basically we have a collection of $w$ where each $w$ corresponds to certain $x_{i}$ Each $x_{i}$ corresponds to an event $A_{i}$. 
    + **NB**  $x_{i}$ can have multiple w-s that through $X(w)$ become $x_{i}$ but 1 w will always correspond only 1 $x_{i}$
 + As each w has only one corresponding $x_{i}$ the corresponding $A_{i}$ s will from a full system. Where $A_{i}$ $\cap$ $A_{j}$= $\emptyset$     
+E
+
+
+### EXAMPLE FOR BINOMIAL DISTRIBUTION 
+
+![image](https://user-images.githubusercontent.com/21141607/203270323-bb827514-de06-44f7-9b8b-33925ddd9875.png)
+
 
 ## SOFT INTRO TO RANDOM VARIABLES
 
