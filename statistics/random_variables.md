@@ -45,9 +45,38 @@
 + As each w has only one corresponding $x_{i}$ the corresponding $A_{i}$ s will from a full system. Where $A_{i}$ $\cap$ $A_{j}$= $\emptyset$     
 
 
-### EXAMPLE FOR BINOMIAL DISTRIBUTION 
+### **HOW DO WE GET A SAMPLE**    
 
-![image](https://user-images.githubusercontent.com/21141607/203270323-bb827514-de06-44f7-9b8b-33925ddd9875.png)
++ A sample is a collection of **experiment results**, **events** or **X**. 
++ From this sample, based on the X values we get, we can derive some estimate (Usually a Mean or STD)  
++ This means for a specific distribution, a collection of X. is a sample and sample size is the count of X. 
+
+
+#### **BERNOULLI DISTRIBUTION**
+
+For Bernoulli distributon X. are in the range of 0..1 - aka a sample is collection of experiments, events, X. 
+
+**Sample example**
+~~~python
+[1,1,0,1,0,0,1] 
+~~~
+This Sample has size of 7
+
+#### **BINOMIAL DISTRIBUTION** 
+
+For Binomial distribution we have function X where we take a result of experiment (for example trial_result=[1,1,0,1,0,0,1]) with certain amount of trials and X(trial_result)=k , aka how many times there was success in one experiment. In this case X.s could be in range [0,1,2,3,4,5,6,7,....]. Each experiment in this case becomes 1 element in the sample.
+
+
+**Sample example**
+~~~python
+[X(experiment1=[1,1,0,1,0,0,1]),....,X(experiment_N=[1,1,0,0,0,1,1])].
+~~~
+This sample now has a sample size of N. 
+
+
+
+
+
 
 
 ## SOFT INTRO TO RANDOM VARIABLES
