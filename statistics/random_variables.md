@@ -74,11 +74,6 @@ For Binomial distribution we have function X where we take a result of experimen
 This sample now has a sample size of N. 
 
 
-
-
-
-
-
 ## SOFT INTRO TO RANDOM VARIABLES
 
 + [Additional Explanation by Khan Academy](https://www.youtube.com/watch?v=3v9w79NhsfI)
