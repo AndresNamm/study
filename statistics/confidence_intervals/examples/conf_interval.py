@@ -1,13 +1,9 @@
 # %% [markdown]
 # # Confidence Intervals
 # + [Quick Reference to my fantastic CI tutorial](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/CONFIDENCE%20INTERVALS.pdf)
-# + [This code is based on this blog post](https://towardsdatascience.com/how-to-calculate-confidence-intervals-in-python-a8625a48e62b)    
+# + [This code is based on this blog post](https://towardsdatascience.com/how-to-calculate-confidence-intervals-in-python-a8625a48e62b)           
+#    
 # We are taking the data from Uniform distribution. 
-# According to the Central Limit Theorem (CLT). Means of any distribution will follow a normal distribution.
-# with std of $\frac{\sigma}{\sqrt{n}}$ where n is the sample size and $\sigma$ is the global std which usually is estimated by sample std. 
-# If we can say (based on CLT) that the sample means center around the global mean with std $\frac{\sigma}{\sqrt{n}}$ then based on the characteristics of normal distribution
-# we can also say that that 66 % percent of the means are +/- 1 std away from the global mean. ~95 % is ~2 std away from the global mean and ~99% means is 2.3 std away from global mean.
-# Thus if we have the sample mean and based on the sample size and sample std, the std for the sample means, we can now say the interval where (66%,95%,99%) of the means should be located. 
 
 # %%
 import numpy as np 
@@ -90,14 +86,22 @@ def plot_default_histogram(x,bins=40,start=0,end=100,title="Distribution over sa
 plot_default_histogram(x,title="Sample from uniform distribution")
 
 # %% [markdown]
+
+
 # Now we perform this experiment 1000 times and see how the distribution of means will look like. E.g. we take the sample with size sample_size (set above) and we do this 1000 times. 
-# Then we plot the means of these 1000 samples. Based on the Central Limit Theorem (CLT) this distribution should now be a normal distribution with ~ global mean and the standard distribution 
-# $\frac{\sigma}{\sqrt{n}}$ where $\sigma$= Global STD (Can be estimated by sample std/Bootstrapping)  and n is sample size for 1 sample. 
+# Then we plot the means of these 1000 samples.           
+# 
+# According to the Central Limit Theorem (CLT). Means of any distribution will follow a normal distribution.
+# with std of $\frac{\sigma}{\sqrt{n}}$ where n is the sample size and $\sigma$ is the global std which usually is estimated by sample std.
+#      
 # **PS! In reality we almost always limit our experiment with taking 1 sample only. The 1000 sample setup only aims to showcase 
-# how Central Limit Theorem turns any distribution (in this case Uniform) into Normal Distribution (With smaller samples t distribution) with sample mean as the global mean and std $\frac{\sigma}{\sqrt{n}}$**
+# how Central Limit Theorem turns any distribution (in this case Uniform) into Normal Distribution (With smaller samples t distribution) with sample mean as the global mean and std $\frac{\sigma}{\sqrt{n}}$**       
+# 
+# If we can say (based on CLT) that the sample means center around the global mean with std $\frac{\sigma}{\sqrt{n}}$ then based on the [characteristics of normal distribution](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/PH717-QuantCore/PH717-Module6-RandomError/PH717-Module6-RandomError5.html)
+# we can also say that that 66 % percent of the means are +/- 1 std away from the global mean. ~95 % is ~2 std away from the global mean and ~99% means is 2.5 std away from global mean.
+# Thus if we have the sample mean and based on the sample size and sample std, the std for the sample means, we can now say the interval where (68%,95%,99%) of the means should be located. 
+# This logic can be applied to the t-distribution as well. 
 
-
-# %% 
 means = []
 for i in range(1000):
     x, ci_z, ci_t = perform_comparison(sample_size=SAMPLE_SIZE,confidence=0.95)
@@ -107,7 +111,33 @@ means = np.asarray(means)
 plot_default_histogram(means,bins=50,start=30,end=70)
 #%% [markdown]    
 # Lets now take a few additional  samples to show how we derive the confidence interval from 1 sample. 
-# **Run the cells below at least 5 times to see how the confidence intervals are generated for each sample**
+# + The confidence interval if we assume normal distribution. Sample sizes 30 and up SAMPLE_ESTIMATE +/- $\frac{\sigma}{\sqrt{n}}*Z$
+# + The confidence interval if we assume a t-distribution. Sample sizes less than 30 SAMPLE_ESTIMATE +/- $\frac{\sigma}{\sqrt{n}}*T$       
+#
+# Reminder - Z-value and T-value are calculated based on the Confidence interval size we chose. (Usually 95% or 99%). Based on these percentages we find min and max values (-t/+t or -z/+z) in the
+# standardized t or normal distribution x scale where 95 % or 99 % of the data belongs to.    
+#     
+# EXAMPLE
+
+sample_size=5
+print(f"T value calculation with sample size {sample_size}")
+for ci in [0.95,0.99]:
+    alpha=1-ci
+    degrees_of_freedom=sample_size-1    
+    sample_t_val=float(np.abs(t.ppf(alpha/2,degrees_of_freedom))) # t_val - based on confidence we have chosen, how many standard distributions is the ci width. If Confidence is 95%, then std is  ~2
+    print(f"T value for CI {ci} is {sample_t_val}")
+
+
+print(f"Z value calculation, Here the sample size is by default assumed to be bigger than 30")
+for ci in [0.95,0.99]:
+    alpha=1-ci
+
+    z_val=float(np.abs(norm.ppf(alpha/2)))
+    print(f"Z value for CI {ci} is {z_val}")
+
+
+
+
 
 #%% [markdown]  
 # **ADDITIONAL SAMPLE 1 COMPARED TO MEAN**
@@ -126,16 +156,16 @@ def take_sample_and_show(means):
     z_color='m'
     plt.axvline(sample_ci_z.upper_bound, color=z_color, linestyle='dashed', linewidth=1)
     plt.axvline(sample_ci_z.lower_bound, color=z_color, linestyle='dashed', linewidth=1)
-    plt.text(sample_ci_z.upper_bound*1.01, max_ylim*0.8, 'z',color=z_color) 
-    plt.text(sample_ci_z.lower_bound*1.01, max_ylim*0.8, 'z',color=z_color) 
+    plt.text(sample_ci_z.upper_bound*1.01, max_ylim*0.8, 'ci_z',color=z_color) 
+    plt.text(sample_ci_z.lower_bound*1.01, max_ylim*0.8, 'ci_z',color=z_color) 
     sample_ci_z.print_statistics()
 
     # PLOT CI INFO FOR T TESTS
     t_color='g'
     plt.axvline(sample_ci_t.upper_bound, color=t_color, linestyle='dashed', linewidth=1)
     plt.axvline(sample_ci_t.lower_bound, color=t_color, linestyle='dashed', linewidth=1)
-    plt.text(sample_ci_t.upper_bound*1.01, max_ylim*0.7, 't',color=t_color) 
-    plt.text(sample_ci_t.lower_bound*1.01, max_ylim*0.7, 't',color=t_color) 
+    plt.text(sample_ci_t.upper_bound*1.01, max_ylim*0.7, 'ci_t',color=t_color) 
+    plt.text(sample_ci_t.lower_bound*1.01, max_ylim*0.7, 'ci_t',color=t_color) 
     sample_ci_t.print_statistics()
     print("t distribution has wider confidence intervals compared to z distribution")
     print(f"t.width-z.width {sample_ci_t.get_size()-sample_ci_z.get_size()} ")
@@ -194,8 +224,8 @@ legend=plt.legend(('t','norm'))
 # %% [markdown]
 # We have a sample called "intake". From previous results we have knowledge that that the global mean is 7725. 
 # Based on this we form hypotheses
-# + H0 - "intake" mean is not significantly larger. 
-# + H1 - "intake" mean is significantly larger.
+# + H0 - "intake" mean is not significantly different. 
+# + H1 - "intake" mean is significantly different.
 # We set the significance standard level to 5%. Because we are looking at differences both smaller and larger, this is going to be 
 # a two sided t-test. E.g we will look if the mean extracted from this sample does not fall into the 95% Confidence interval of the samples(size=11) from distribution with mean 7725 
 # E.g on both sides only roughly 2.5 percent of values are larger/smaller than it. 
@@ -209,26 +239,29 @@ assumed_global_mean = 7725
 # STD but in our case we have taken the sample std as the estimate. To make it a bit larger,
 # we have taken the std to be with only degrees of freedom=1. This reduces the t-value as it makes 
 # the element below the fraction to be larger.
-t_val =  (np.mean(intake) - assumed_global_mean) / (intake.std(ddof=1)/np.sqrt(len(intake)))
+degrees_of_freedom=sample_size-1
+sample_t_val =  (np.mean(intake) - assumed_global_mean) / (intake.std(ddof=1)/np.sqrt(len(intake)))
+alpha=1-0.95
+test_t_val =float(np.abs(t.ppf(alpha/2,degrees_of_freedom))) # t_val - based on confidence we have chosen, how many standard distributions is the ci width. If Confidence is 95%, then std is  ~2
+    
 
 # %% [markdown]
 # In this case we are taking 1000000 samples from **standard** t distribution with 10 degrees of freedom. Then we are a just comparing
 # our calculated t-value for the "intake" mean with all the samples and finding the fraction our t_value is smaller 
 # than the sample element. Basically, if our calculated t-value is very large, this should happen very few times.
 # Infact less than 0.025 time
-degrees_of_freedom=len(intake)-1
-alpha=1-0.95
-extremum_val=float(np.abs(t.ppf(alpha/2,degrees_of_freedom))) # PPF Percent Point Function. The percent point function (ppf) is the inverse of the cumulative distribution function. https://www.itl.nist.gov/div898/handbook/eda/section3/eda362.htm
+#
+# In this chart the red lines represent the 0.95 boundaries for the test. If another value is more extreme than that, then test is significant. 
 
+degrees_of_freedom=len(intake)-1
 s = np.random.standard_t(df=degrees_of_freedom,size=1000000)
 h = plt.hist(s, bins=100, density=True)
-probability=np.sum(np.abs(t_val) < np.abs(s)) / float(len(s))
-print(f"Probability of having a more extreme value than t_val:{t_val} is {probability} < 0.025")
-plt.axvline(t_val, color='k', linestyle='dashed', linewidth=1)
-plt.axvline(-extremum_val, color='r', linestyle='dashed', linewidth=1)
-plt.axvline(extremum_val, color='r', linestyle='dashed', linewidth=1)
+probability=np.sum(np.abs(sample_t_val) < np.abs(s)) / float(len(s))
+print(f"Probability of having a more extreme value than sample t_val:{sample_t_val} is {probability} < 0.025")
+plt.axvline(sample_t_val, color='g', linestyle='dashed', linewidth=1)
+plt.axvline(test_t_val, color='r', linestyle='dashed', linewidth=1)
+
+plt.axvline(-test_t_val, color='r', linestyle='dashed', linewidth=1)
 min_ylim, max_ylim = plt.ylim()
-plt.text(t_val*1.7, max_ylim*0.95, 't_val') 
-plt.text(-extremum_val*0.9, max_ylim*0.95, 'ci-') 
-plt.text(extremum_val*1.1, max_ylim*0.95, 'ci+') 
+plt.text(sample_t_val*1.7, max_ylim*0.95, 'sample t_val') 
 # %% [markdown]
