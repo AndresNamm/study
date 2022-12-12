@@ -1,14 +1,18 @@
 
 
+Recommended orded to go through this subtopic:
 
-+ [Slide summary introduction to Confidence Intervals topic](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/CONFIDENCE%20INTERVALS.pdf)
-+ General introduction to confidence intervals with Video -> On this page below
-+ [Code introduction to the Confidence Interval topic](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/examples/conf_interval.ipynb) 
-+ [Comparing 2 samples t-test](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/hypothesis_testing.md)
-
-
++ [_Slide_ summary introduction to Confidence Intervals topic](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/CONFIDENCE%20INTERVALS.pdf)
++ _Tutorial_ introduction to confidence intervals with Video -> On this page below
++ [_Tutorial_  Explanation of Standard Deviation](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/STD_dive.md)
++ [_Code_ introduction to the Confidence Interval topic](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/examples/conf_interval.ipynb) 
++ [_Tutorial_ comparing 2 samples t-test](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/hypothesis_testing.md)
++ [_Tutorial_ Random Variables](https://github.com/AndresNamm/study/blob/main/statistics/random_variables.md)
++ [_Code_ Bernoulli distribution and Confidence Intervals](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/examples/binary_conf_interval.ipynb)
 
 I have provided some references and short explanations but in general I really recommend you to google your own tutorials that fit the best for the way you understand things. 
+
+
 
 # ME GOING OVER THIS TOPIC IN YOUTUBE
 
