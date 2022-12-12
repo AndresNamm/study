@@ -40,9 +40,10 @@
 ## DISCRETE CASE 
 
 + Random variable is a function X: $\Omega$ -> $R$
++ Each Random Variable has a certain probability of happening - this forms a distribution over Random Variables.
 + Basically we have a collection of $w$ where each $w$ corresponds to certain $x_{i}$ Each $x_{i}$ corresponds to an event $A_{i}$. 
    + **NB**  $x_{i}$ can have multiple w-s that through $X(w)$ become $x_{i}$ but 1 w will always correspond only 1 $x_{i}$
-+ As each w has only one corresponding $x_{i}$ the corresponding $A_{i}$ s will from a full system. Where $A_{i}$ $\cap$ $A_{j}$= $\emptyset$     
++ As each w has only one corresponding $x_{i}$ the corresponding $A_{i}$ s will from a full system.Where $A_{i}$ $\cap$ $A_{j}$= $\emptyset$.
 
 
 ### **HOW DO WE GET A SAMPLE**    
@@ -54,17 +55,26 @@
 
 #### **BERNOULLI DISTRIBUTION**
 
-For Bernoulli distributon X. are in the range of 0..1 - aka a sample is collection of experiments, events, X. 
+For Bernoulli distributon 
+
++ The bernoulli experiment has 2 opposing results.
++ Experiment outcome is whethere something happened or something did not happen - **EX** coin flip. 
++ The experiment outcome is mapped to X to range 0..1 -
++ a sample is collection of multiple experiments, events, X. 
 
 **Sample example**
+
 ~~~python
-[1,1,0,1,0,0,1] 
+[1,1,0,1,0,0,1]=['x1','x2','x3','x4','x5','x6','x7']
 ~~~
 This Sample has size of 7
 
 #### **BINOMIAL DISTRIBUTION** 
 
-For Binomial distribution we have function X where we take a result of experiment (for example trial_result=[1,1,0,1,0,0,1]) with certain amount of trials and X(trial_result)=k , aka how many times there was success in one experiment. In this case X.s could be in range [0,1,2,3,4,5,6,7,....]. Each experiment in this case becomes 1 element in the sample.
+For Binomial distribution
++ The experiment measures how many positive results we got when doing the bernoulli experiment n times. 
++ The basic outcome of an experiment is the the collection of n bernoulli experiments
++ The experiment outcome is mapped to X.We have function X where we take a result of experiment (for example trial_result=[1,1,0,1,0,0,1]) with certain amount of trials and X(trial_result)=k , aka how many times there was success in one experiment. In this case X.s could be in range [0,1,2,3,4,5,6,7,....]. Each experiment in this case becomes 1 element in the sample.
 
 
 **Sample example**
