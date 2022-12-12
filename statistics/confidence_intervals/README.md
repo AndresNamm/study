@@ -1,3 +1,13 @@
+
+
+
++ [Slide summary introduction to Confidence Intervals topic](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/CONFIDENCE%20INTERVALS.pdf)
++ General introduction to confidence intervals with Video -> On this page below
++ [Code introduction to the Confidence Interval topic](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/examples/conf_interval.ipynb) 
++ [Comparing 2 samples t-test](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/hypothesis_testing.md)
+
+
+
 I have provided some references and short explanations but in general I really recommend you to google your own tutorials that fit the best for the way you understand things. 
 
 # ME GOING OVER THIS TOPIC IN YOUTUBE
