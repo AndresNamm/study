@@ -8,6 +8,7 @@ Recommended orded to go through this subtopic:
 + [_Slide_ summary introduction to Confidence Intervals topic](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/CONFIDENCE%20INTERVALS.pdf)
 + _Tutorial_ introduction to confidence intervals with Video -> On this page below
 + [_Tutorial_  Explanation of Standard Deviation](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/STD_dive.md)
++ [Types of t-tests](https://www.wallstreetmojo.com/t-test/)
 + [_Code_ introduction to the Confidence Interval topic + t test 1 sample](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/examples/conf_interval.ipynb) 
 + [_Tutorial_ comparing 2 samples t-test](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/hypothesis_testing.md)
 + [_Tutorial_ Random Variables](https://github.com/AndresNamm/study/blob/main/statistics/random_variables.md)
