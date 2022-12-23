@@ -3,22 +3,31 @@
 
 Recommended orded to go through this subtopic:
 
-## Confidence Intervals & T-Tests
+## Confidence Intervals & T-Tests - General use case
 
-+ [_Slide_ summary introduction to Confidence Intervals topic](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/CONFIDENCE%20INTERVALS.pdf)
++ Summary introduction to Confidence Intervals topic - [Slides](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/CONFIDENCE%20INTERVALS.pdf)
 + _Tutorial_ introduction to confidence intervals with Video -> On this page below
-+ [_Tutorial_  Explanation of Standard Deviation](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/STD_dive.md)
-+ [Types of t-tests](https://www.wallstreetmojo.com/t-test/)
-+ [_Code_ introduction to the Confidence Interval topic + t test 1 sample](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/examples/conf_interval.ipynb) 
-+ [_Tutorial_ comparing 2 samples t-test](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/hypothesis_testing.md)
-+ [_Tutorial_ Random Variables](https://github.com/AndresNamm/study/blob/main/statistics/random_variables.md)
-+ [_Code_ Bernoulli distribution and Confidence Intervals](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/examples/binary_conf_interval.ipynb)
++ Explanation of Standard Deviation - [Tutorial](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/STD_dive.md)
++ Types of t-tests - [External article](https://www.wallstreetmojo.com/t-test/)
++ Introduction to the Confidence Interval topic + t test 1 sample - [Code](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/examples/conf_interval.ipynb) 
++ Comparing 2 samples t-test - [Tutorial](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/hypothesis_testing.md)
++ Random Variables Theory - [Tutorial](https://github.com/AndresNamm/study/blob/main/statistics/random_variables.md)
+
+### BINARY VARIABLES
+
+
++ In this case we are looking for experiments where outcome is X=0/1. It is important to distinguish 2 types of ways of looking at this data
+    1. (Bernoulli) Taking a sample of multiple X where X represents one binary result experiment. Here a sample is a collection of all of those elements. In this case we can calculate the sample mean as probability of getting X=1
+    2. (Binomial) Taking a sample of multiple X where X represents how many times out of N trials we got a positive result. Here a sample is multiple experiments with N trials.
+    3. Read more about the theory behind this - [Tutorial](https://github.com/AndresNamm/study/blob/main/statistics/random_variables.md) 
++ _Code_ Bernoulli distribution and Confidence Intervals - [Notebook](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/examples/binary_conf_interval.ipynb)
++ Describing T-tests for comparing difference of Binary Variables - [External article](https://www.coursera.org/lecture/stanford-statistics/the-two-Tsample-z-test-nQB9A)
 
 
 ## Power Analysis
 
-+ [_Tutorial_ Intro](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/power_analysis.md)
-+ [_Power Analysis visualization 2 samples_](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/PowerAnalysis.pdf)
++ Reference - [Tutorial](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/power_analysis.md)
++ Power Analysis visualization of 2 samples - [Power](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/PowerAnalysis.pdf)
 
 # CI EXPLANATION
 

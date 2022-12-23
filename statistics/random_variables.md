@@ -14,10 +14,10 @@
 +  $w$ - assumption is that only 1 $w$ can be the result of an experiment. No overlap between diffferent $w$ s is possible
 + F - the event space (sündmuste ruum) - Collection of multiple possible events (Tõenäosusteooria algkurus, Kalev Pärna, lk 29-30)
    + Example 1: Flipping coin. In this case 1 possible F (event space) is { $\Omega$, $\emptyset$, {heads}, {tails} }
-   + Example 2: Taking 1 card from a deck. In this case possible F (event space) is with size of  $2^{\Omega}$
-   + PS - A member of F is **1 event**. This means a member of F can contain multiple sample outcomes aka multiple $w$.
+   + Example 2: Taking 1 card from a deck. In this case possible F (event space) is with size of  $2^{\Omega}$ _think of the latter as whether element exists or exists not in subset_
+      + **PS** - A member of F is **1 event**. This means a member of F can contain multiple sample outcomes aka multiple $w$.
 
-+   Probability space ( $\Omega$, $P$, F)
++  Probability space ( $\Omega$, $P$, F)
 
 
 # DEFINING THE FUNCTION OF PROBABILITY 
@@ -28,12 +28,9 @@
    + $P(\Omega) = 1$
    + $P(\emptyset) = 0$
    + $P(A) >= 0$
-   + If A and B are mutually exclusive then $P(A and B)=P(A)+P(B)$
+   + If A and B are mutually exclusive then $P(A \cup B)=P(A)+P(B)$
 
 
-## SOME IMPORTANT DEDUCTIONS BASED ON PROBABILITY RULES 
-
-+  $P(A)=1-P(\overline{A})$
 
 # RANDOM VARIABLE / JUHUSLIK SUURUS
 
@@ -48,21 +45,23 @@
 
 ### **HOW DO WE GET A SAMPLE**    
 
-+ A sample is a collection of **experiment results**, **events** or **X**. 
++ A sample is a collection of **experiment results**, **events** or **X**'s. 
 + From this sample, based on the X values we get, we can derive some estimate (Usually a Mean or STD)  
-+ This means for a specific distribution, a collection of X. is a sample and sample size is the count of X. 
++ This means for a specific distribution, a collection of X results is a sample and sample size is the count of X results. 
 
 
 #### **BERNOULLI DISTRIBUTION**
 
-For Bernoulli distributon 
+**PS** - _Using words experiment/trial here interchangeably._
 
-+ The bernoulli experiment has 2 opposing results.
-+ Experiment outcome is whethere something happened or something did not happen - **EX** coin flip. 
-+ The experiment outcome is mapped to X to range 0..1 -
+If we look a the data Bernoulli distributon 
+
++ The bernoulli experiment has 2 potential opposing results.
++ Trial outcome is whethere something happened or something did not happen - **example** coin flip. 
++ The experiment outcome is mapped to X to values [0,1] -
 + a sample is collection of multiple experiments, events, X. 
 
-**Sample example**
+**An example of a sample**
 
 ~~~python
 [1,1,0,1,0,0,1]=['x1','x2','x3','x4','x5','x6','x7']
@@ -72,9 +71,9 @@ This Sample has size of 7
 #### **BINOMIAL DISTRIBUTION** 
 
 For Binomial distribution
-+ The experiment measures how many positive results we got when doing the bernoulli experiment n times. 
-+ The basic outcome of an experiment is the the collection of n bernoulli experiments
-+ The experiment outcome is mapped to X.We have function X where we take a result of experiment (for example trial_result=[1,1,0,1,0,0,1]) with certain amount of trials and X(trial_result)=k , aka how many times there was success in one experiment. In this case X.s could be in range [0,1,2,3,4,5,6,7,....]. Each experiment in this case becomes 1 element in the sample.
++ The sample measures how many positive results we got when doing the bernoulli experiment **n** times. 
++ The basic outcome of an sample is the the collection of **n** bernoulli experiments
++ The experiment outcome is mapped to X .We have function X where we take a result of experiment (for example trial_result=[1,1,0,1,0,0,1]) with certain amount of trials and X(trial_result)=k , aka how many times there was success in one experiment. In this case X.s could be in range [0,1,2,3,4,5,6,7,....]. Each experiment in this case becomes 1 element in the sample.
 
 
 **Sample example**
