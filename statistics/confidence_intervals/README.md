@@ -56,10 +56,10 @@ I have provided some references and short explanations but in general I really r
 
 The proof for central limit theorem is very theoretical and we wont cover it here but the result of CLT is that x samples with Size N point estimates will have a normal distribution around the global mean and standard deviation as (global standard deviation) / sqrt(number of samples) . [Reference to a good explanation](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Probability/BS704_Probability12.html#:~:text=The%20central%20limit%20theorem%20states,will%20be%20approximately%20normally%20distributed.)
 
-![img](CLT.png)
 
 
-# STD 
+
+# STD FOR CLT
 
 ![img](STD.png)
 
