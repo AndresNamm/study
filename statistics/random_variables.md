@@ -45,6 +45,9 @@
 
 ### **HOW DO WE GET A SAMPLE**    
 
++ [Ref](https://www.probabilitycourse.com/chapter8/8_1_1_random_sampling.php)
+    + The collection of random variables X1, X2, X3, ..., Xn is said to be a random sample of size n if they are independent and identically distributed (i.i.d.), .
+
 + A sample is a collection of **experiment results**, **events** or **X**'s. 
 + From this sample, based on the X values we get, we can derive some estimate (Usually a Mean or STD)  
 + This means for a specific distribution, a collection of X results is a sample and sample size is the count of X results. 
