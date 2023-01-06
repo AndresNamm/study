@@ -6,6 +6,9 @@
 + [Pretty good article about effect size](https://github.com/AndresNamm/study/blob/main/statistics/effect_size.md)
 
 
+![image](https://user-images.githubusercontent.com/21141607/210966970-30c40f7a-c02c-4af6-a0f5-758da1c8ddb7.png)
+
+
 # COMMENTS ON DOING POWER ANALYSIS ON HYPOTHESIS TESTING - CALCULATING EFFECT
 
 
