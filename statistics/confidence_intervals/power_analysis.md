@@ -1,9 +1,17 @@
+# MAIN REFERENCES
 
-+ [Multiple good examples on doing Power Analysis on Confidence Intervals and Hypothesis tests](https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_power/bs704_power_print.html)  
++ Power Analysis Playlist with my own explanations - [Video](https://www.youtube.com/playlist?list=PLlH7A2i7EAO4sU3DGhJKQUVF4W1_nKEdf)
++ Overview slides created by me - [Slides](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/PowerAnalysis.pdf)
++ Multiple good examples on doing Power Analysis on Confidence Intervals and Hypothesis tests - [External Tutorial](https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_power/bs704_power_print.html)  
    + [Same but in HTML](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Power/) 
++ Effect Size - [Tutorial](https://github.com/AndresNamm/study/blob/main/statistics/effect_size.md)
+
+
+
+# ADDITIONAL MATERIALS
+
 + [Statistical Power](https://www.youtube.com/watch?v=Rsc5znwR5FA)
 + [Power Analysis, Clearly Explained](https://www.youtube.com/watch?v=VX_M3tIyiYk&t=50s)
-+ [Pretty good article about effect size](https://github.com/AndresNamm/study/blob/main/statistics/effect_size.md)
 
 
 ![image](https://user-images.githubusercontent.com/21141607/210966970-30c40f7a-c02c-4af6-a0f5-758da1c8ddb7.png)
