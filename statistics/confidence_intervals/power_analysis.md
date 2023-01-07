@@ -1,23 +1,39 @@
-# MAIN REFERENCES
+# IN A NUTNUTSHELL
+
+![image](https://user-images.githubusercontent.com/21141607/211139454-73843ff4-ad5a-4f72-b894-a0f6ef14e9e8.png)
+
+# REFERENCES
+
+## MAIN REFERENCES
 
 + Power Analysis Playlist with my own explanations - [Video](https://www.youtube.com/playlist?list=PLlH7A2i7EAO4sU3DGhJKQUVF4W1_nKEdf)
 + Overview slides created by me - [Slides](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/PowerAnalysis.pdf)
 + Multiple good examples on doing Power Analysis on Confidence Intervals and Hypothesis tests - [External Tutorial](https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_power/bs704_power_print.html)  
    + [Same but in HTML](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Power/) 
 + Effect Size - [Tutorial](https://github.com/AndresNamm/study/blob/main/statistics/effect_size.md)
-+ Comments about Power analysis - [Tutorial below](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/power_analysis.md)
++ Comments about Power analysis on Hypothesis Testing - [Tutorial below](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/power_analysis.md)
 
-
-# ADDITIONAL MATERIALS
+## ADDITIONAL MATERIALS
 
 + [Statistical Power](https://www.youtube.com/watch?v=Rsc5znwR5FA)
 + [Power Analysis, Clearly Explained](https://www.youtube.com/watch?v=VX_M3tIyiYk&t=50s)
 
 
+# COMMENTS
+
+## POWER ANALYSIS FOR CONFIDENCE INTERVALS IN A NUTSHELL
+
+![image](https://user-images.githubusercontent.com/21141607/211139541-139c52a2-6727-4295-be86-1235c511f55a.png)
+
+
+
+## POWER ANALYSIS FOR HYPOTHESIS TESTING IN A NUTSHELL
+
 ![image](https://user-images.githubusercontent.com/21141607/210966970-30c40f7a-c02c-4af6-a0f5-758da1c8ddb7.png)
 
+# ADDITIONAL COMMENTS
 
-# COMMENTS ON DOING POWER ANALYSIS ON HYPOTHESIS TESTING - CALCULATING EFFECT
+## COMMENTS ON DOING POWER ANALYSIS ON HYPOTHESIS TESTING AND CALCULATING EFFECT
 
 
 The aim of Power Analysis is to determine the necessary sample size to reject false H0 with probability 1-Beta. 1-Beta is otherwise referred to as **Power** 
