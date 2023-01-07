@@ -5,7 +5,7 @@
 + Multiple good examples on doing Power Analysis on Confidence Intervals and Hypothesis tests - [External Tutorial](https://sphweb.bumc.bu.edu/otlt/mph-modules/bs/bs704_power/bs704_power_print.html)  
    + [Same but in HTML](https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Power/) 
 + Effect Size - [Tutorial](https://github.com/AndresNamm/study/blob/main/statistics/effect_size.md)
-
++ Comments about Power analysis - [Tutorial below](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/power_analysis.md)
 
 
 # ADDITIONAL MATERIALS
