@@ -24,11 +24,6 @@ Recommended orded to go through this subtopic:
 + Describing T-tests for comparing difference of Binary Variables - [External article](https://www.coursera.org/lecture/stanford-statistics/the-two-Tsample-z-test-nQB9A)
 
 
-## Power Analysis
-
-+ Reference - [Tutorial](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/power_analysis.md)
-+ Power Analysis visualization of 2 samples - [Power](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/PowerAnalysis.pdf)
-
 # CI EXPLANATION
 
 I have provided some references and short explanations but in general I really recommend you to google your own tutorials that fit the best for the way you understand things. 
