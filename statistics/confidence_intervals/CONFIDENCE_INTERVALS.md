@@ -1,9 +1,17 @@
 
-# REFERENCES
 
-Recommended orded to go through this subtopic:
 
-## Confidence Intervals & T-Tests - General use case
+
+# PROBABILITY CONCEPTS
+# NORMAL DISTRIBUTION
+# CENTRAL LIMIT THEOREM
+# CONFIDENCE INTERVALS CONCEPT
+# HYPOTHESIS TESTING CONCEPT
+# EXAMPLES OF CONFIDENCE INTERVALS AND HYPOTHESIS TESTING
+# ADVANCED 
+## PROPORTIONS ESTIMATION CAVEATS
+## LARGE SAMPLE PROBLEM
+
 
 + Summary introduction to Confidence Intervals topic - [Slides](https://github.com/AndresNamm/study/blob/main/statistics/confidence_intervals/CONFIDENCE%20INTERVALS.pdf)
 + _Tutorial_ introduction to confidence intervals with Video -> On this page below
