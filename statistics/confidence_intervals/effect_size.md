@@ -1,4 +1,4 @@
-# ES = $\frac{\mu_1-\mu_2}{\sigma}$
+**ES = $\frac{\mu_1-\mu_2}{\sigma}$**
 
 
 ES = Effect Size You can think of this as what size effect IN REGARDS TO standard deviations exists between $\mu_1$ and $\mu_2$. Std from the examples I have seen can be taken from literature or it can be pooled between 2 std from different groups.
